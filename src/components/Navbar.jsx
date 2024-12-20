@@ -86,9 +86,10 @@ const Navbar = () => {
     <AppBar
       position="relative"
       sx={{
-        backgroundColor: "#172831",
-        boxShadow: "0px 2px 10px rgba(0, 0, 0, 0.1)",
-        px: { xs: 2, sm: 3, md: 5 },
+
+        maxWidth: "100vw",
+        backgroundColor: theme.navFooterBackgroundColor,
+        color: theme.textColor,
       }}
     >
       <Container maxWidth="xl">
