@@ -36,12 +36,7 @@ const Navbar = () => {
     <AppBar
       position="relative"
       sx={{
-        maxWidth: {
-          sm: 768,
-          md: 1024,
-          lg: 1440,
-          xl: 1536,
-        },
+        maxWidth: "100vw",
         backgroundColor: theme.navFooterBackgroundColor,
         color: theme.textColor,
       }}
