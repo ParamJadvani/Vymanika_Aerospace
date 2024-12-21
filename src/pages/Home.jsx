@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import Navbar from "../components/Navbar";
 import Banner from "../components/Banner";
 import bannerimage from "../assets/BannerImage/Home.png";
@@ -16,7 +16,8 @@ const Home = () => {
           <Box>
             <Typography
               variant="h4"
-              sx={{ fontWeight: 900, textAlign: "start" }}
+              sx={{ fontWeight: 900, textAlign: "start" ,color:theme.headerTextColor }}
+              
             >
               Innovating the Future of UAV Technology
             </Typography>
@@ -57,6 +58,7 @@ const Home = () => {
                   textTransform: "none",
                   borderRadius: "0px",
                   fontWeight: 700,
+                  border:"2px solid #5C76DD"
                 }}
               >
                 Know More
