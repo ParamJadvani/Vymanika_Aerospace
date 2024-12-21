@@ -116,8 +116,7 @@ const Banner = ({ image, contentDiv, reverse = false }) => {
         <Box
           sx={{
             width: "100%",
-            position: "relative", // Ensure the clouds are positioned relative to the container
-            overflow: "hidden", // Prevent clouds from extending beyond the container
+            overflow: "hidden",
           }}
         >
           {/* First Bottom Cloud Box */}
@@ -131,7 +130,18 @@ const Banner = ({ image, contentDiv, reverse = false }) => {
               position: "absolute",
               left: { xs: "-4%", sm: "-11%", md: "-10%" },
               bottom: { xs: "-5.5%", sm: "-4%", md: "-8%", lg: "1%" },
-              animation: "float 6s ease-in-out infinite", // Add animation
+              animation: "float 6s ease-in-out infinite",
+              "@keyframes float": {
+                "0%": {
+                  transform: "translateY(0)",
+                },
+                "50%": {
+                  transform: "translateY(-10px)",
+                },
+                "100%": {
+                  transform: "translateY(0)",
+                },
+              },
             }}
           />
 
@@ -146,29 +156,21 @@ const Banner = ({ image, contentDiv, reverse = false }) => {
               position: "absolute",
               left: { xs: "70%", sm: "80%", md: "80%" },
               bottom: { xs: "-5.5%", sm: "-1%", md: "-2%", lg: "1%" },
-              animation: "float 8s ease-in-out infinite", // Add animation
-              // border:"10px solid red"
+              animation: "float 6s ease-in-out infinite",
+              "@keyframes float": {
+                "0%": {
+                  transform: "translateY(0)",
+                },
+                "50%": {
+                  transform: "translateY(-10px)",
+                },
+                "100%": {
+                  transform: "translateY(0)",
+                },
+              },
             }}
           />
         </Box>
-        <Box
-          component="img"
-          src={cloud}
-          sx={{
-            animation: "float 6s ease-in-out infinite",
-            "@keyframes float": {
-              "0%": {
-                transform: "translateY(0)",
-              },
-              "50%": {
-                transform: "translateY(-10px)", // Adjust height for floating effect
-              },
-              "100%": {
-                transform: "translateY(0)",
-              },
-            },
-          }}
-        />
       </Container>
     </Box>
   );
