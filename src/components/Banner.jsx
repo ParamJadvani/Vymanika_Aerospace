@@ -14,7 +14,7 @@ const Banner = ({ image, contentDiv, reverse = false }) => {
             sm: theme.values.tablet,
             md: theme.values.laptop,
             lg: theme.values.desktop,
-            xl: 1536,
+            xl: "xl",
             position: "relative",
           },
         }}

@@ -15,9 +15,15 @@
 }
 
 /* Larger screens */
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1536px) {
   .banner-image {
     height: 400px !important; /* Default height for large screens */
+  }
+}
+
+@media (min-width: 1536px) {
+  .banner-image {
+    height: 500px !important;
   }
 }
 
