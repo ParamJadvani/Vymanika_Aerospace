@@ -11,6 +11,9 @@ import samrtFarm from "/src/assets/CardImage/smart-farm.png";
 import pilot from "/src/assets/CardImage/pilot.png";
 import GridCard from "/src/components/Card/GridCard/GridCard";
 import smallDrone2 from "/src/assets/Image PNG/freepik--drone-3--inject-1-1 copy.png";
+import DroneBanner from "../components/DroneBanner";
+import Banner_2 from "../components/Banner_2";
+import cb from "../assets/SectionImage/Certification-bro.png";
 
 const trainingData = [
   {
@@ -117,18 +120,68 @@ const Training = () => {
             className="smallDrone"
             sx={{
               position: "absolute",
-              height: { xs: "70px", md: "90px", xl: "100px" },
+              height: { xs: "50px", md: "90px", xl: "100px" },
               zIndex: 100,
               right: {
-                xs: "-3%",
-                sm: "-4%",
+                xs: "-0%",
                 md: "13%",
                 lg: "-7%",
                 xl: "6%",
               },
-              top: { xs: "0%", sm: "50%", md: "80%", lg: "70%" },
+              top: { xs: "1%", sm: "50%", md: "80%", lg: "70%" },
+              display: {
+                xs: "none",
+                sm: "inline",
+              },
             }}
           />
+        }
+      />
+
+      {/* Drone Banner */}
+      <DroneBanner />
+
+      {/* Certification */}
+      <Banner_2
+        image={cb}
+        isDrone={false}
+        contentDiv={
+          <Box sx={{ paddingBottom: 4 }}>
+            <Box
+              sx={{
+                paddingX: { xs: 2, sm: 4 },
+                paddingY: { xs: 2, sm: 4 },
+              }}
+            >
+              <Typography
+                variant="body1"
+                sx={{
+                  marginBottom: 3,
+                  textAlign: "center",
+                  fontSize: { xs: "1.5rem", sm: "2rem" },
+                  lineHeight: 1.6,
+                  color: theme.headerTextColor,
+                  fontWeight: 800,
+                }}
+              >
+                CERTIFICATION
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{
+                  fontSize: { xs: "1rem", sm: "1.1rem", md: "1.3rem" },
+                  lineHeight: 1.6,
+                  color: "#000000",
+                  fontWeight: 800,
+                  textAlign: "center",
+                }}
+              >
+                Participants receive industry-recognized certifications upon
+                successful completion of their training, including
+                DGCA-certified Remote Pilot Certificates.
+              </Typography>
+            </Box>
+          </Box>
         }
       />
     </>

@@ -6,6 +6,7 @@ import cu from "/src/assets/BannerImage/Contactus.png";
 import { FaLocationDot } from "react-icons/fa6";
 import { Phone, Email } from "@mui/icons-material";
 import { useTheme } from "@emotion/react";
+import ContactUSMap from "../components/ContactUSMap/ContactUSMap";
 
 const ContactUS = () => {
   const theme = useTheme();
@@ -153,6 +154,9 @@ const ContactUS = () => {
           </Box>
         }
       />
+
+      {/* Contact US Map */}
+      <ContactUSMap />
     </>
   );
 };

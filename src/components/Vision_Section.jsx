@@ -6,6 +6,7 @@ import "/src/css/vision_section.css";
 import bigDrone from "/src/assets/Image PNG/freepik--drone-3--inject-1.png";
 import smallDrone from "/src/assets/Image PNG/freepik--drone-1--inject-1-3.png";
 import smallDrone2 from "/src/assets/Image PNG/freepik--drone-2--inject-1 copy.png";
+import smallDrone3 from "/src/assets/Image PNG/freepik--drone-1--inject-1-6.png";
 
 const VisionSection = ({
   vectorImage,
@@ -30,7 +31,7 @@ const VisionSection = ({
           },
         }}
       >
-        {bigDroneImage && (
+        {bigDroneImage ? (
           <Box
             component="img"
             src={bigDrone}
@@ -48,6 +49,19 @@ const VisionSection = ({
                 xl: "-1.5%",
               },
               top: { xs: "-1%", sm: "1%", md: "0%", lg: "-4%", xl: "-2%" },
+            }}
+          />
+        ) : (
+          <Box
+            component="img"
+            src={smallDrone3}
+            className="smallDrone"
+            sx={{
+              position: "absolute",
+              height: { xs: "70px", md: "85px" },
+              zIndex: 100,
+              left: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-3%", xl: "-1%" },
+              top: { xs: "3%", sm: "0%" },
             }}
           />
         )}

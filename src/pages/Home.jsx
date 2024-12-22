@@ -2,7 +2,7 @@
 import Navbar from "/src/components/Navbar";
 import Banner from "/src/components/Banner";
 import bannerimage from "/src/assets/BannerImage/Home.png";
-import { Box, Button, Typography, Grid } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useNavigate } from "react-router-dom";
@@ -23,6 +23,8 @@ import smallDrone from "/src/assets/Image PNG/freepik--drone-1--inject-1-3.png";
 import blackBigDrone from "/src/assets/Image PNG/freepik--drone-2--inject-1.png";
 
 import "/src/css/vision_section.css";
+import DroneBanner from "../components/DroneBanner";
+import ContactUsInput from "../components/ContactUsInput";
 
 const servicesData = [
   {
@@ -160,6 +162,7 @@ const Home = () => {
         backgroundimage={jadu2}
         description="Vymanika Aerospace envisions a future where unmanned aerial vehicles seamlessly enhance industries and daily life. We aim to lead in UAV innovation, setting new standards and unlocking transformative possibilities in aerospace technology. Our goal is to create a more efficient, connected world through advanced unmanned aviation solutions."
         reverse={true}
+        bigDroneImage={false}
       />
 
       {/* "Our Services" Section */}
@@ -190,13 +193,13 @@ const Home = () => {
               height: { xs: "60px", sm: "70px", md: "100px", lg: "120px" },
               zIndex: 100,
               right: {
-                xs: "-3%",
+                xs: "-0%",
                 sm: "-5%",
                 md: "-5%",
                 lg: "-6%",
                 xl: "-5%",
               },
-              top: { xs: "-1%", sm: "0%", lg: "6.5%" },
+              top: { xs: "-0%", sm: "0%", lg: "6.5%" },
             }}
           />
         }
@@ -229,6 +232,12 @@ const Home = () => {
           />
         }
       />
+
+      {/* Drone Banner */}
+      <DroneBanner />
+
+      {/* Contact Us */}
+      <ContactUsInput />
     </>
   );
 };
