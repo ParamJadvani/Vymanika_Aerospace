@@ -1,13 +1,13 @@
 // import React from "react";
 import { Box, Container } from "@mui/material";
-import "../css/banner.css";
-import cloud from "../assets/Image PNG/freepik--Cloud--inject-73.png";
+import "/src/css/banner.css";
+import cloud from "/src/assets/Image PNG/freepik--Cloud--inject-73.png";
 import { useTheme } from "@emotion/react";
 
 const Banner = ({ image, contentDiv, reverse = false }) => {
   const theme = useTheme();
   return (
-    <Box sx={{ width: "100%", overflowX: "hidden" }}>
+    <Box sx={{ width: "100%", overflowX: "hidden"}}>
       <Container
         sx={{
           maxWidth: {
