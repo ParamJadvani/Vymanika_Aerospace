@@ -34,10 +34,10 @@ const ContactUSMap = () => {
               sm: "-5%",
               md: "-5%",
               lg: "-3%",
-              xl: "-1%",
+              xl: "0%",
             },
-            top: { xs: "", lg: "0%" },
-            left: { xs: "70%"},
+            top: { xs: "", lg: "0%" ,xl:'0%'},
+            left: { xs: "100%"},
             // display: {
             //   xs: "none",
             //   sm: "inline",
@@ -54,7 +54,7 @@ const ContactUSMap = () => {
             position: "absolute",
             height: { xs: "70px", md: "85px" },
             zIndex: 100,
-            left: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-3%", xl: "-1%" },
+            left: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-3%", xl: "-5%" },
             top: { xs: "66%", sm: "68%", lg: "65%" },
             animation: "float 3s ease-in-out infinite",
           }}

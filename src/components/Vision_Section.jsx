@@ -101,7 +101,7 @@ const VisionSection = ({
               height: { xs: "70px", md: "85px" },
               zIndex: 100,
               right: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-3%", xl: "-1%" },
-              top: { xs: "-1%", sm: "1%", md: "0%", lg: "1%", xl: "2%" },
+              top: { xs: "1%", sm: "1%", md: "1%", lg: "1%", xl: "2%" },
               animation: "float 4s ease-in-out infinite",
             }}
           />
