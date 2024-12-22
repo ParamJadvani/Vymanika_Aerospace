@@ -28,7 +28,6 @@ const SliderCard = () => {
         <Box
           component="img"
           src={smallDrone}
-          className="smallDrone"
           sx={{
             position: "absolute",
             height: { xs: "80px", md: "90px" },
@@ -41,7 +40,6 @@ const SliderCard = () => {
         <Box
           component="img"
           src={smallDrone2}
-          className="smallDrone"
           sx={{
             position: "absolute",
             height: { xs: "70px", md: "85px" },

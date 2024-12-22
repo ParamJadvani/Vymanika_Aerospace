@@ -95,7 +95,7 @@ const VisionSection = ({
           <Box
             component="img"
             src={smallDrone}
-            className="smallDrone"
+            // className="smallDrone"
             sx={{
               position: "absolute",
               height: { xs: "70px", md: "85px" },
