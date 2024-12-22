@@ -65,14 +65,14 @@ const VisionSection = ({
           <Box
             component="img"
             src={smallDrone3}
-            className="smallDrone"
+            // className="smallDrone"
             sx={{
               position: "absolute",
               height: { xs: "70px", md: "85px" },
               zIndex: 100,
               left: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-3%", xl: "-1%" },
               top: { xs: "3%", sm: "0%" },
-              animation: "float 3s ease-in-out infinite",
+              // animation: "float 3s ease-in-out infinite",
             }}
           />
         )}

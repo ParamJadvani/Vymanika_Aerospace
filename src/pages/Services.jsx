@@ -148,6 +148,7 @@ const Services = () => {
               zIndex: 100,
               right: { xs: "-0%", sm: "-5%", md: "-7%", lg: "-7%", xl: "-8%" },
               top: { xs: "0%", sm: "50%", lg: "35%" },
+              animation: "float 3s ease-in-out infinite",
             }}
           />
         }

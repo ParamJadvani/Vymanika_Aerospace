@@ -9,6 +9,9 @@ import { useTheme } from "@emotion/react";
 import ContactUSMap from "../components/ContactUSMap/ContactUSMap";
 import AttachImageFooter from "../components/Footer/AttachImageFooter";
 import Footerimage from "/src/assets/Image PNG/Group 55.png";
+import Footer from "../components/Footer/Footer";
+import smallDrone4 from "../assets/Image PNG/freepik--drone-3--inject-1.png";
+
 
 const ContactUS = () => {
   const theme = useTheme();
@@ -29,6 +32,19 @@ const ContactUS = () => {
               alignItems: "start",
             }}
           >
+            <Box
+              component="img"
+              src={smallDrone4}
+              className="smallDroneDroneBanner"
+              sx={{
+                position: "absolute",
+                height: { xs: "70px", md: "85px" },
+                zIndex: 100,
+                left: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-2%", xl: "-1%" },
+                top: { xs: "30%", sm: "48%", md: "48%", lg: "8%" },
+                animation: "float 4s ease-in-out infinite",
+              }}
+            />
             {/* Title */}
             <Typography
               variant={isXL ? "h3" : isSmall ? "h5" : "h4"}
@@ -159,6 +175,7 @@ const ContactUS = () => {
       />
 
       {/* Contact US Map */}
+      
       <ContactUSMap />
 
       {/* Footer */}

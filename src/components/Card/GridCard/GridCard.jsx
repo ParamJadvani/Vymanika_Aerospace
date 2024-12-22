@@ -31,6 +31,7 @@ const GridCard = ({
           sm: "inline",
         },
         top: { xs: "-1%", sm: "1%", md: "1.5%", lg: "1%", xl: "4%" },
+        animation: "float 3s ease-in-out infinite",
       }}
     />
   ),

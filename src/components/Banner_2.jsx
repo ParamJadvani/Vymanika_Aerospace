@@ -30,7 +30,7 @@ const Banner_2 = ({
           <Box
             component="img"
             src={smallDrone3}
-            className="smallDrone"
+            // className="smallDrone"
             sx={{
               position: "absolute",
               height: { xs: "70px", md: "85px" },
@@ -41,6 +41,7 @@ const Banner_2 = ({
                 xs: "none",
                 sm: "inline",
               },
+              animation: "float 3s ease-in-out infinite",
             }}
           />
         )}

@@ -10,6 +10,7 @@ import drone_1 from "/src/assets/CardImage/drone (1).png";
 import samrtFarm from "/src/assets/CardImage/smart-farm.png";
 import pilot from "/src/assets/CardImage/pilot.png";
 import GridCard from "/src/components/Card/GridCard/GridCard";
+import smallDrone from "/src/assets/Image PNG/freepik--drone-1--inject-1-3.png";
 import smallDrone2 from "/src/assets/Image PNG/freepik--drone-3--inject-1-1 copy.png";
 import DroneBanner from "../components/DroneBanner";
 import Banner_2 from "../components/Banner_2";
@@ -136,6 +137,7 @@ const Training = () => {
                 xs: "none",
                 sm: "inline",
               },
+              animation: "float 3s ease-in-out infinite",
             }}
           />
         }
@@ -166,6 +168,25 @@ const Training = () => {
               >
                 CERTIFICATION
               </Typography>
+              <Box
+                component="img"
+                src={smallDrone}
+                className="smallDroneDroneBanner"
+                sx={{
+                  position: "absolute",
+                  height: { xs: "70px", md: "85px" },
+                  zIndex: 100,
+                  left: {
+                    xs: "-0%",
+                    sm: "-5%",
+                    md: "-5%",
+                    lg: "-2%",
+                    xl: "-1%",
+                  },
+                  top: { xs: "32%", sm: "50%", md: "50%", lg: "10%" },
+                  animation: "float 4s ease-in-out infinite",
+                }}
+              />
               <Typography
                 variant="body1"
                 sx={{

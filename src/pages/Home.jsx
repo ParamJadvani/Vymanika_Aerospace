@@ -185,6 +185,7 @@ const Home = () => {
               zIndex: 100,
               left: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-3%", xl: "-1%" },
               top: { xs: "1%", sm: "3%", lg: "0%" },
+              animation: "float 3s ease-in-out infinite",
             }}
           />
         }
@@ -204,6 +205,7 @@ const Home = () => {
                 xl: "-5%",
               },
               top: { xs: "-0%", sm: "0%", lg: "6.5%" },
+              animation: "float 3s ease-in-out infinite",
             }}
           />
         }
@@ -232,6 +234,8 @@ const Home = () => {
                 xs: "none",
                 sm: "inline",
               },
+
+              animation: "float 3s ease-in-out infinite",
             }}
           />
         }

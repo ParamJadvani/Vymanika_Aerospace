@@ -26,10 +26,11 @@ const DroneBanner = () => {
           className="smallDroneDroneBanner"
           sx={{
             position: "absolute",
-            height: { xs: "80px", md: "90px" },
+            height: { xs: "70px", md: "85px" },
             zIndex: 100,
             left: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-2%", xl: "-1%" },
-            top: { xs: "35%", sm: "50%", md: "50%", lg: "10%" },
+            top: { xs: "32%", sm: "50%", md: "50%", lg: "10%" },
+            animation: "float 4s ease-in-out infinite",
           }}
         />
         <Box
@@ -86,12 +87,15 @@ const DroneBanner = () => {
 
             {/* Content */}
             <Box>
-              <Grid container sx={{
-                width:{
-                  lg:'80%',
-                  xs:'100%'
-                }
-              }}>
+              <Grid
+                container
+                sx={{
+                  width: {
+                    lg: "80%",
+                    xs: "100%",
+                  },
+                }}
+              >
                 <Grid item xs={12}>
                   <Box
                     sx={{

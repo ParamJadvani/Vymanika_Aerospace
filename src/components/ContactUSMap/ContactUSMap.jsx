@@ -3,6 +3,8 @@ import { Box, Container } from "@mui/material";
 import React from "react";
 import GoogleMap from "./GoogleMap";
 import ContactForm from "./ContactForm";
+import smallDrone from "./freepik--drone-1--inject-1-6.png";
+import smallDrone5 from "./freepik--drone-1--inject-1-3.png";
 
 const ContactUSMap = () => {
   const theme = useTheme();
@@ -19,6 +21,44 @@ const ContactUSMap = () => {
           },
         }}
       >
+        <Box
+          component="img"
+          src={smallDrone}
+          className="smallDrone"
+          sx={{
+            position: "absolute",
+            height: { xs: "70px", md: "85px" },
+            zIndex: 100,
+            right: {
+              xs: "-0%",
+              sm: "-5%",
+              md: "-5%",
+              lg: "-3%",
+              xl: "-1%",
+            },
+            top: { xs: "", lg: "0%" },
+            left: { xs: "70%"},
+            // display: {
+            //   xs: "none",
+            //   sm: "inline",
+            // },
+
+            animation: "float 3s ease-in-out infinite",
+          }}
+        />
+        <Box
+          component="img"
+          src={smallDrone5}
+          className="smallDrone"
+          sx={{
+            position: "absolute",
+            height: { xs: "70px", md: "85px" },
+            zIndex: 100,
+            left: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-3%", xl: "-1%" },
+            top: { xs: "66%", sm: "68%", lg: "65%" },
+            animation: "float 3s ease-in-out infinite",
+          }}
+        />
         {/* Map and Form Section */}
         <Box
           sx={{
