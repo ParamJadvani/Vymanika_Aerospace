@@ -5,6 +5,7 @@ import Footerimage from "/src/assets/Image PNG/Frame 188 copy.png";
 import DroneSurvillance from "/src/assets/Image PNG/Drone surveillance-bro.png";
 import DroneRace from "/src/assets/Image PNG/Drone race-pana 1.png";
 import DroneAmico from "/src/assets/Image PNG/drone-amico.png";
+import Dronebro from "/src/assets/Image PNG/drone-bro.png";
 import BlogBanner from "../components/BlogSections/BlogBanner";
 import BlogBanner_2 from "../components/BlogSections/BlogBanner_2";
 import { Box, Container } from "@mui/material";
@@ -28,7 +29,7 @@ const data1 = [
 
 const data2 = [
   {
-    image: "",
+    image: Dronebro,
     title: "AVPL International to Establish Drone",
     description:
       "AVPL International, a prominent name in the Indian drone industry, is set to bolster the nation’s drone manufacturing capabilities with the launch of a state-of-the-art facility in Bihar.",
