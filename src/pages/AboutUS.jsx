@@ -1,14 +1,14 @@
 // import React from "react";
-import Navbar from "../components/Navbar";
-import Banner from "../components/Banner";
-import AboutUs_Banner from "../assets/BannerImage/Aboutus.png";
+import Navbar from "/src/components/Navbar";
+import Banner from "/src/components/Banner";
+import AboutUs_Banner from "/src/assets/BannerImage/Aboutus.png";
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from "@emotion/react";
-import OMV from "../assets/SectionImage/Business Plan-bro.png";
-import jadu from "../assets/Vector.png";
-import jadu2 from "../assets/Vector2.png";
-import vsrp from "../assets/SectionImage/Vision statement-rafiki.png";
-import Vision_Section from "../components/Vision_Section";
+import OMV from "/src/assets/SectionImage/Business Plan-bro.png";
+import jadu from "/src/assets/Vector.png";
+import jadu2 from "/src/assets/Vector2.png";
+import vsrp from "/src/assets/SectionImage/Vision statement-rafiki.png";
+import Vision_Section from "/src/components/Vision_Section";
 
 const AboutUS = () => {
   const theme = useTheme();
@@ -28,13 +28,13 @@ const AboutUS = () => {
               sx={{
                 fontWeight: 900,
                 textAlign: "start",
-                fontsize:{
-                  xs:theme.fontsize.xs,
-                  sm:theme.fontsize.sm,
-                  md:theme.fontsize.md,
-                  lg:theme.fontsize.lg,
-                  xl:theme.fontsize.xl,
-                  },
+                fontsize: {
+                  xs: theme.fontsize.xs,
+                  sm: theme.fontsize.sm,
+                  md: theme.fontsize.md,
+                  lg: theme.fontsize.lg,
+                  xl: theme.fontsize.xl,
+                },
                 color: theme.headerTextColor,
               }}
             >

@@ -2,12 +2,12 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 // Import all page components
-import Home from "../pages/Home";
-import AboutUS from "../pages/AboutUS";
-import Services from "../pages/Services";
-import ContactUS from "../pages/ContactUS";
-import Training from "../pages/Training";
-import Blog from "../pages/Blog";
+import Home from "/src/pages/Home";
+import AboutUS from "/src/pages/AboutUS";
+import Services from "/src/pages/Services";
+import ContactUS from "/src/pages/ContactUS";
+import Training from "/src/pages/Training";
+import Blog from "/src/pages/Blog";
 
 const Router = () => {
   const routes = [

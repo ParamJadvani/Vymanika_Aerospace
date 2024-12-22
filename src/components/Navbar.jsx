@@ -25,7 +25,7 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import logo from "../assets/LOGO.png";
+import logo from "/src/assets/LOGO.png";
 
 const Navbar = () => {
   const theme = useTheme();

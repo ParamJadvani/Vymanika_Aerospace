@@ -2,10 +2,10 @@
 // import React from "react";
 import { Box, Typography, Container } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import "../css/vision_section.css";
-import bigDrone from "../assets/Image PNG/freepik--drone-3--inject-1.png";
-import smallDrone from "../assets/Image PNG/freepik--drone-1--inject-1-3.png";
-import smallDrone2 from "../assets/Image PNG/freepik--drone-2--inject-1 copy.png";
+import "/src/css/vision_section.css";
+import bigDrone from "/src/assets/Image PNG/freepik--drone-3--inject-1.png";
+import smallDrone from "/src/assets/Image PNG/freepik--drone-1--inject-1-3.png";
+import smallDrone2 from "/src/assets/Image PNG/freepik--drone-2--inject-1 copy.png";
 
 const VisionSection = ({
   vectorImage,
@@ -17,9 +17,8 @@ const VisionSection = ({
   smallDroneImage = false,
 }) => {
   const theme = useTheme();
-  console.log(theme.fontsize);
   return (
-    <Box sx={{ width: "100%", overflowX: "hidden", mt: { sm: 10, xs: 8 } }}>
+    <Box sx={{ width: "100%", overflowX: "hidden", marginY: 10 }}>
       <Container
         sx={{
           maxWidth: {
@@ -105,7 +104,7 @@ const VisionSection = ({
                 lg: theme.fontsize.lg,
                 xl: theme.fontsize.xl,
               },
-              marginBottom: { xs: "0.5rem", lg: "2.2rem" },
+              marginBottom: { xs: "0.5rem", lg: "2.7rem" },
               width: "100%",
             }}
           >

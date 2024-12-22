@@ -1,19 +1,70 @@
 // import React from "react";
-import Navbar from "../components/Navbar";
-import Banner from "../components/Banner";
-import bannerimage from "../assets/BannerImage/Home.png";
-import { Box, Button, Typography } from "@mui/material";
+import Navbar from "/src/components/Navbar";
+import Banner from "/src/components/Banner";
+import bannerimage from "/src/assets/BannerImage/Home.png";
+import { Box, Button, Typography, Grid } from "@mui/material";
 import { useTheme } from "@emotion/react";
-
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useNavigate } from "react-router-dom";
+import OMV from "/src/assets/SectionImage/Business Plan-bro.png";
+import jadu from "/src/assets/Vector.png";
+import jadu2 from "/src/assets/Vector2.png";
+import vsrp from "/src/assets/SectionImage/Vision statement-rafiki.png";
+import Vision_Section from "/src/components/Vision_Section";
+import drone_delivery from "/src/assets/CardImage/drone-delivery.png";
+import support from "/src/assets/CardImage/support.png";
+import drone from "/src/assets/CardImage/drone.png";
+import GridCard from "/src/components/Card/GridCard/GridCard";
+import SliderCard from "/src/components/Card/SliderCard/SliderCard";
+import certificate from "/src/assets/CardImage/winner.png";
+import mapping from "/src/assets/CardImage/mapping.png";
+import pilot from "/src/assets/CardImage/pilot.png";
+import smallDrone from "/src/assets/Image PNG/freepik--drone-1--inject-1-3.png";
+import blackBigDrone from "/src/assets/Image PNG/freepik--drone-2--inject-1.png";
 
-import OMV from "../assets/SectionImage/Business Plan-bro.png";
-import jadu from "../assets/Vector.png";
-import jadu2 from "../assets/Vector2.png";
-import vsrp from "../assets/SectionImage/Vision statement-rafiki.png";
-import Vision_Section from "../components/Vision_Section";
+import "/src/css/vision_section.css";
 
+const servicesData = [
+  {
+    image: drone_delivery,
+    title: "Drone Show",
+    description:
+      "Drone Shows are synchronized aerial displays using drones to create visuals, replacing traditional fireworks for entertainment and awareness.",
+  },
+  {
+    image: support,
+    title: "Surveying & Mapping",
+    description:
+      "Drone surveying provides accurate data faster mapping, improved safety, and 3D models, revolutionizing land and construction surveying processes.",
+  },
+  {
+    image: drone,
+    title: "Agriculture Spraying",
+    description:
+      "Agriculture drones ensure efficient crop spraying, reducing pesticide use, improving precision, saving time, and covering larger areas effectively.",
+  },
+];
+
+const trainingData = [
+  {
+    image: certificate,
+    title: "DGCA Certified Remote Pilot Certificate (RPC)",
+    description:
+      "Get certified by DGCA with hands-on training to become a licensed drone operator. Learn safety protocols, legal requirements, and technical skills to excel in UAV operations.",
+  },
+  {
+    image: pilot,
+    title: "Photography & Videography",
+    description:
+      "Capture breathtaking aerial visuals for events, films, or real estate promotions.",
+  },
+  {
+    image: mapping,
+    title: "Fertilizer/Pesticide Application in Agriculture",
+    description:
+      "Specialized training to use drones for efficient and precise agricultural spraying, ensuring better crop yields and reduced waste.",
+  },
+];
 
 const Home = () => {
   const theme = useTheme();
@@ -21,7 +72,7 @@ const Home = () => {
   const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
   const navigate = useNavigate();
   return (
-    <div>
+    <>
       <Navbar />
       <Banner
         image={bannerimage}
@@ -110,7 +161,75 @@ const Home = () => {
         description="Vymanika Aerospace envisions a future where unmanned aerial vehicles seamlessly enhance industries and daily life. We aim to lead in UAV innovation, setting new standards and unlocking transformative possibilities in aerospace technology. Our goal is to create a more efficient, connected world through advanced unmanned aviation solutions."
         reverse={true}
       />
-    </div>
+
+      {/* "Our Services" Section */}
+      <GridCard
+        data={servicesData}
+        title="Our Services"
+        onclickEvent={() => navigate("/services")}
+        leftImage={
+          <Box
+            component="img"
+            src={smallDrone}
+            className="smallDrone"
+            sx={{
+              position: "absolute",
+              height: { xs: "70px", md: "85px" },
+              zIndex: 100,
+              left: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-3%", xl: "-1%" },
+              top: { xs: "1%", sm: "3%", lg: "0%" },
+            }}
+          />
+        }
+        rightImage={
+          <Box
+            component="img"
+            src={blackBigDrone}
+            sx={{
+              position: "absolute",
+              height: { xs: "60px", sm: "70px", md: "100px", lg: "120px" },
+              zIndex: 100,
+              right: {
+                xs: "-3%",
+                sm: "-5%",
+                md: "-5%",
+                lg: "-6%",
+                xl: "-5%",
+              },
+              top: { xs: "-1%", sm: "0%", lg: "6.5%" },
+            }}
+          />
+        }
+      />
+
+      {/* Testimonial Card */}
+      <SliderCard />
+
+      {/* "Training & Courses" Section */}
+      <GridCard
+        data={trainingData}
+        title="Training & Courses"
+        onclickEvent={() => navigate("/training")}
+        rightImage={
+          <Box
+            component="img"
+            src={smallDrone}
+            className="smallDrone"
+            sx={{
+              position: "absolute",
+              height: { xs: "70px", md: "85px" },
+              zIndex: 100,
+              right: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-3%", xl: "-1%" },
+              top: { xs: "50%", lg: "0%" },
+              display: {
+                xs: "none",
+                sm: "inline",
+              },
+            }}
+          />
+        }
+      />
+    </>
   );
 };
 
