@@ -24,7 +24,7 @@ const ContactUSMap = () => {
         <Box
           component="img"
           src={smallDrone}
-          className="smallDrone"
+          // className="smallDrone"
           sx={{
             position: "absolute",
             height: { xs: "70px", md: "85px" },
@@ -32,16 +32,16 @@ const ContactUSMap = () => {
             right: {
               xs: "-0%",
               sm: "-5%",
-              md: "-5%",
+              md: "-6%",
               lg: "-3%",
               xl: "0%",
             },
-            top: { xs: "", lg: "0%" ,xl:'0%'},
-            left: { xs: "100%"},
-            // display: {
-            //   xs: "none",
-            //   sm: "inline",
-            // },
+            top: { xs: "", lg: "0%", xl: "0%" },
+            left: { xs: "100%" },
+            display: {
+              xs: "none",
+              sm: "inline",
+            },
 
             animation: "float 3s ease-in-out infinite",
           }}
@@ -54,9 +54,13 @@ const ContactUSMap = () => {
             position: "absolute",
             height: { xs: "70px", md: "85px" },
             zIndex: 100,
-            left: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-3%", xl: "-5%" },
+            left: { xs: "-0%", sm: "-10%", md: "-6%", lg: "-5%", xl: "-5%" },
             top: { xs: "66%", sm: "68%", lg: "65%" },
             animation: "float 3s ease-in-out infinite",
+            display: {
+              xs: "none",
+              sm: "inline",
+            },
           }}
         />
         {/* Map and Form Section */}

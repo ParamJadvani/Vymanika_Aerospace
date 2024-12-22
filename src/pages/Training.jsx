@@ -121,7 +121,7 @@ const Training = () => {
           <Box
             component="img"
             src={smallDrone2}
-            className="smallDrone"
+            // className="smallDrone"
             sx={{
               position: "absolute",
               height: { xs: "50px", md: "90px", xl: "100px" },
@@ -133,10 +133,6 @@ const Training = () => {
                 xl: "6%",
               },
               top: { xs: "1%", sm: "50%", md: "80%", lg: "70%" },
-              display: {
-                xs: "none",
-                sm: "inline",
-              },
               animation: "float 3s ease-in-out infinite",
             }}
           />

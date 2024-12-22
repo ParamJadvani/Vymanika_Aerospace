@@ -10,10 +10,16 @@ import "/src/css/vision_section.css";
 const SliderCard = () => {
   const theme = useTheme();
   return (
-    <Box sx={{ width: "100%", marginY: { lg: 10, xs: 0 },marginBottom:{
-        xs:'-20%',
-        sm:5
-    } }}>
+    <Box
+      sx={{
+        width: "100%",
+        marginY: { lg: 10, xs: 0 },
+        marginBottom: {
+          xs: "-20%",
+          sm: 5,
+        },
+      }}
+    >
       <Container
         sx={{
           maxWidth: {
@@ -77,7 +83,9 @@ const SliderCard = () => {
           <Box
             sx={{
               display: "flex",
-              justifyContent: "space-between",
+              justifyContent: {
+                xs: "space-around",
+              },
               flexDirection: {
                 xs: "column",
                 lg: "row",
@@ -102,7 +110,7 @@ const SliderCard = () => {
                 alt="Banner"
                 sx={{
                   maxWidth: {
-                    lg: "90%",
+                    lg: "80%",
                     md: "70%",
                     sm: "90%",
                     xs: "100%",

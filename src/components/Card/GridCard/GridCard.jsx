@@ -79,55 +79,26 @@ const GridCard = ({
             </Typography>
             <Grid container rowSpacing={3}>
               {data.map(({ image, title, description }, index) => {
-                const totalItemsInLastRow =
-                  data.length % 3 === 0 ? 3 : data.length % 3;
-                const isLastRowCard =
-                  index >= data.length - totalItemsInLastRow;
-
-                const lgSize =
-                  isLastRowCard && totalItemsInLastRow === 1
-                    ? 12
-                    : isLastRowCard && totalItemsInLastRow === 2
-                    ? 6
-                    : 4;
-
-                const isLastCardInRow = (index + 1) % 3 === 0;
-                const isFirstCard = index % 3 === 0;
-
-                const isSingleLastCardInRow =
-                  isLastRowCard && data.length % 3 !== 0;
-
+                const positionInRow = index % 3; // Position of the item in the row (0, 1, 2 for first, middle, last)
                 const justifyContent =
-                  totalItemsInLastRow === 1
-                    ? "center"
-                    : totalItemsInLastRow === 2 && isLastRowCard
-                    ? "center"
-                    : index % 3 === 0
-                    ? "flex-start"
-                    : (index + 1) % 3 === 0 || index === data.length - 1
-                    ? "flex-end"
-                    : "center";
+                  positionInRow === 0
+                    ? "flex-start" // First item in the row
+                    : positionInRow === 1
+                    ? "center" // Middle item in the row
+                    : "flex-end"; // Last item in the row
 
                 return (
                   <Grid
                     item
                     xs={12}
                     md={6}
-                    lg={lgSize}
-                    xl={4}
+                    lg={4}
                     key={index}
                     sx={{
                       display: "flex",
                       justifyContent: {
-                        xs: "center",
-                        lg: justifyContent,
-                        xl: isFirstCard
-                          ? "flex-start" // Align to start for the first card
-                          : isSingleLastCardInRow
-                          ? "center" // Align to center for a single last card in an incomplete row
-                          : isLastCardInRow || isLastRowCard
-                          ? "flex-end" // Align to end for the last card in a full row
-                          : "center", // Center-align for other cards
+                        xs: "center", // Center-align on smaller screens
+                        lg: justifyContent, // Use calculated alignment for larger screens
                       },
                       alignItems: "center",
                     }}

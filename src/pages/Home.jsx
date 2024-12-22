@@ -195,16 +195,16 @@ const Home = () => {
             src={blackBigDrone}
             sx={{
               position: "absolute",
-              height: { xs: "60px", sm: "70px", md: "100px", lg: "120px" },
+              height: { xs: "60px", sm: "70px", md: "90px", lg: "100px" },
               zIndex: 100,
               right: {
                 xs: "-0%",
                 sm: "-5%",
                 md: "-5%",
-                lg: "-6%",
-                xl: "-5%",
+                lg: "-3%",
+                xl: "0%",
               },
-              top: { xs: "-0%", sm: "0%", lg: "6.5%" },
+              top: { xs: "-0%", sm: "0%", lg: "6.5%",xl:'2%' },
               animation: "float 3s ease-in-out infinite",
             }}
           />
