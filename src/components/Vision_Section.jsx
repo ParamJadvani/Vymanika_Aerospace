@@ -31,7 +31,8 @@ const VisionSection = ({
           },
         }}
       >
-        {bigDroneImage ? (
+
+{bigDroneImage && (
           <Box
             component="img"
             src={bigDrone}
@@ -48,9 +49,14 @@ const VisionSection = ({
                 lg: "-5%",
                 xl: "-1.5%",
               },
-              top: { xs: "-1%", sm: "1%", md: "0%", lg: "-4%", xl: "-2%" },
-            }}
-          />
+              top: { xs: "-1%", sm: "1%", md: "0%", lg: "1%", xl: "2%" },
+              animation: "float 3s ease-in-out infinite",
+              "@keyframes float": {
+                "0%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-10px)" },
+                "100%": { transform: "translateY(0px)" },
+              },
+
         ) : (
           <Box
             component="img"
@@ -62,11 +68,19 @@ const VisionSection = ({
               zIndex: 100,
               left: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-3%", xl: "-1%" },
               top: { xs: "3%", sm: "0%" },
+ animation: "float 3s ease-in-out infinite",
+              "@keyframes float": {
+                "0%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-10px)" },
+                "100%": { transform: "translateY(0px)" },
+              },
             }}
           />
         )}
 
-        {smallDroneImage ? (
+
+      
+                  {smallDroneImage ? (
           <Box
             component="img"
             src={smallDrone2}
@@ -77,6 +91,12 @@ const VisionSection = ({
               zIndex: 100,
               right: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-3%", xl: "-1%" },
               top: { xs: "3%", sm: "0%" },
+              animation: "float 4s ease-in-out infinite",
+              "@keyframes float": {
+                "0%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-8px)" },
+                "100%": { transform: "translateY(0px)" },
+              },
             }}
           />
         ) : (
@@ -89,10 +109,18 @@ const VisionSection = ({
               height: { xs: "70px", md: "85px" },
               zIndex: 100,
               right: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-3%", xl: "-1%" },
-              top: { xs: "50%", lg: "0%" },
+              top: { xs: "-1%", sm: "1%", md: "0%", lg: "1%", xl: "2%" },
+              animation: "float 4s ease-in-out infinite",
+              "@keyframes float": {
+                "0%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-8px)" },
+                "100%": { transform: "translateY(0px)" },
+              },
             }}
           />
         )}
+
+
 
         <Box
           sx={{
