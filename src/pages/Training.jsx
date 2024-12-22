@@ -1,5 +1,5 @@
 // import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import Navbar from "../components/Navbar";
 import cap from "../assets/BannerImage/Training.png";
 import Banner from "../components/Banner";
@@ -7,6 +7,8 @@ import { useTheme } from "@emotion/react";
 
 const Training = () => {
   const theme=useTheme()
+  const isXL = useMediaQuery(theme.breakpoints.up("xl"));
+  const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <>
       <Navbar />
@@ -18,15 +20,15 @@ const Training = () => {
           <Box>
             {/* Title Section */}
             <Typography
-              variant="h4"
+              variant={isXL ? "h3" : isSmall ? "h5" : "h4"}
               sx={{
                 fontWeight: 900,
-                fontSize: {
-                  xs: "1.1rem",
-                  sm: "2rem",
-                  md: "2.2rem",
-                  lg: "2.3rem",
-                  xl: "3rem",
+                fontsize:{
+                xs:theme.fontsize.xs,
+                sm:theme.fontsize.sm,
+                md:theme.fontsize.md,
+                lg:theme.fontsize.lg,
+                xl:theme.fontsize.xl,
                 },
                 marginBottom: { xs: 2, sm: 3, md: 4 },
                 textAlign: "start",

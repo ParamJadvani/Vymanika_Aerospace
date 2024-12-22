@@ -2,11 +2,13 @@
 import Navbar from "../components/Navbar";
 import Services_banner from "../assets/BannerImage/Service.png";
 import Banner from "../components/Banner";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from "@emotion/react";
 
 const Services = () => {
-  const theme=useTheme()
+  const theme = useTheme();
+  const isXL = useMediaQuery(theme.breakpoints.up("xl"));
+  const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <>
       <Navbar />
@@ -17,20 +19,20 @@ const Services = () => {
           <Box>
             {/* Title Section */}
             <Typography
-              variant="h4"
+              variant={isXL ? "h3" : isSmall ? "h5" : "h4"}
               sx={{
                 fontWeight: 900,
                 textAlign: "start",
-                fontSize: {
-                  xs: "1.51rem",
-                  sm: "2.2rem",
-                  md: "2.5rem",
-                  lg: "2.5rem",
-                  xl: "3.5rem",
+                fontsize: {
+                  xs: theme.fontsize.xs,
+                  sm: theme.fontsize.sm,
+                  md: theme.fontsize.md,
+                  lg: theme.fontsize.lg,
+                  xl: theme.fontsize.xl,
                 },
                 marginBottom: { xs: 2, sm: 3, md: 4 },
 
-                color:theme.headerTextColor,
+                color: theme.headerTextColor,
               }}
             >
               Overview of Services

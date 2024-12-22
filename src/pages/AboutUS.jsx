@@ -2,11 +2,13 @@
 import Navbar from "../components/Navbar";
 import Banner from "../components/Banner";
 import AboutUs_Banner from "../assets/BannerImage/Aboutus.png";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from "@emotion/react";
 
 const AboutUS = () => {
-  const theme=useTheme()
+  const theme = useTheme();
+  const isXL = useMediaQuery(theme.breakpoints.up("xl"));
+  const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <>
       <Navbar />
@@ -17,12 +19,18 @@ const AboutUS = () => {
           <Box>
             {/* Title Section */}
             <Typography
-              variant="h4"
+              variant={isXL ? "h3" : isSmall ? "h5" : "h4"}
               sx={{
                 fontWeight: 900,
                 textAlign: "start",
-                fontSize: { xs: "1.7rem", sm: "2rem" },
-                color:theme.headerTextColor
+                fontsize:{
+                  xs:theme.fontsize.xs,
+                  sm:theme.fontsize.sm,
+                  md:theme.fontsize.md,
+                  lg:theme.fontsize.lg,
+                  xl:theme.fontsize.xl,
+                  },
+                color: theme.headerTextColor,
               }}
             >
               About Vymanika Aerospace

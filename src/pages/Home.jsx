@@ -20,9 +20,19 @@ const Home = () => {
         contentDiv={
           <Box>
             <Typography
-
               variant={isXL ? "h3" : isSmall ? "h5" : "h4"}
-              sx={{ fontWeight: 900, textAlign: "start" ,color:theme.headerTextColor }}
+              sx={{
+                fontWeight: 900,
+                fontsize: {
+                  xs: theme.fontsize.xs,
+                  sm: theme.fontsize.sm,
+                  md: theme.fontsize.md,
+                  lg: theme.fontsize.lg,
+                  xl: theme.fontsize.xl,
+                },
+                textAlign: "start",
+                color: theme.headerTextColor,
+              }}
             >
               Innovating the Future of UAV Technology
             </Typography>
@@ -68,7 +78,7 @@ const Home = () => {
                   textTransform: "none",
                   borderRadius: "0px",
                   fontWeight: 700,
-                  border:"2px solid #5C76DD"
+                  border: "2px solid #5C76DD",
                 }}
                 onClick={() => navigate("/about")}
               >
