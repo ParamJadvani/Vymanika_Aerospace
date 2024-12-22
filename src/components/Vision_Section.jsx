@@ -5,7 +5,7 @@ import { useTheme } from "@mui/material/styles";
 import "../css/vision_section.css";
 import bigDrone from "../assets/Image PNG/freepik--drone-3--inject-1.png";
 import smallDrone from "../assets/Image PNG/freepik--drone-1--inject-1-3.png";
-import smallDrone2 from "../assets/Image PNG/freepik--drone-2--inject-1.png";
+import smallDrone2 from "../assets/Image PNG/freepik--drone-2--inject-1 copy.png";
 
 const VisionSection = ({
   vectorImage,
@@ -54,10 +54,10 @@ const VisionSection = ({
             className="smallDrone"
             sx={{
               position: "absolute",
-              height: { xs: "70px", md: "85px" },
+              height: { xs: "90px", md: "100px", lg: "115px" },
               zIndex: 100,
               right: { xs: "-0%", sm: "-5%", md: "-5%" },
-              top: { xs: "50%", lg: "0%" },
+              top: { xs: "3%", sm: "0%" },
             }}
           />
         ) : (
@@ -97,6 +97,7 @@ const VisionSection = ({
                 lg: "2.5rem",
                 xl: "2.7rem",
               },
+              marginBottom: { xs: "0.5rem", lg: "2.2rem" },
               width: "100%",
             }}
           >
