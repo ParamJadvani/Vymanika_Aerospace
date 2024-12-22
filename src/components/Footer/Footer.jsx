@@ -18,7 +18,7 @@ const Footer = () => {
         backgroundColor: theme.navFooterBackgroundColor,
         color: theme.textColor,
         overflowX: "hidden",
-        marginTop:-2
+        marginTop: -2,
       }}
     >
       <Container
@@ -47,7 +47,7 @@ const Footer = () => {
           }}
         >
           {/* Logo and Social Icons */}
-          <Grid item xs={12} lg={3} sx={{ textAlign: "center" }}>
+          <Grid item xs={12} lg={3} sx={{ textAlign: "start" }}>
             <Box
               component="img"
               src={logo}
@@ -78,6 +78,7 @@ const Footer = () => {
           <Grid item xs={12} md={6} lg={3}>
             <Section
               title="Pages"
+              padding={8}
               content={
                 <Box
                   sx={{

@@ -1,11 +1,18 @@
 import React from "react";
 import { Box, Typography, useTheme } from "@mui/material";
 
-const Section = ({ title, content, isContact }) => {
+const Section = ({ title, content, isContact, padding = false }) => {
   const theme = useTheme();
 
   return (
-    <Box sx={{ mb: 3 }}>
+    <Box
+      sx={{
+        mb: 3,
+        paddingLeft: {
+          lg: padding ? padding : undefined,
+        },
+      }}
+    >
       <Typography
         variant="h6"
         sx={{
@@ -36,7 +43,7 @@ const Section = ({ title, content, isContact }) => {
                 key={idx}
                 sx={{
                   display: "flex",
-                  justifyContent: {md: "center",xs:'start',lg:'start'},
+                  justifyContent: { md: "center", xs: "start", lg: "start" },
                   alignItems: "center",
                   gap: 1.5,
                   "& svg": {

@@ -41,7 +41,7 @@ const AboutUS = () => {
                   xl: theme.fontsize.xl,
                 },
                 color: theme.headerTextColor,
-                textTransform: "Uppercase",
+                textTransform: "Capitalized",
               }}
             >
               About Vymanika Aerospace

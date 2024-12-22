@@ -95,7 +95,7 @@ const Home = () => {
                   xl: theme.fontsize.xl,
                 },
                 textAlign: "start",
-                textTransform: "Uppercase",
+                textTransform: "Capitalized",
                 color: theme.headerTextColor,
               }}
             >

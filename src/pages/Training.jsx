@@ -14,7 +14,8 @@ import smallDrone2 from "/src/assets/Image PNG/freepik--drone-3--inject-1-1 copy
 import DroneBanner from "../components/DroneBanner";
 import Banner_2 from "../components/Banner_2";
 import cb from "../assets/SectionImage/Certification-bro.png";
-import Footer from "../components/Footer/Footer";
+import AttachImageFooter from "../components/Footer/AttachImageFooter";
+import Footerimage from "/src/assets/Image PNG/Group 55.png";
 
 const trainingData = [
   {
@@ -76,7 +77,7 @@ const Training = () => {
                 },
                 marginBottom: { xs: 2, sm: 3, md: 4 },
                 textAlign: "start",
-                textTransform: "Uppercase",
+                textTransform: "Capitalized",
                 color: theme.headerTextColor,
               }}
             >
@@ -185,7 +186,9 @@ const Training = () => {
       />
 
       {/* Footer */}
-      <Footer />
+
+      {/* Footer */}
+      <AttachImageFooter image={Footerimage} />
     </>
   );
 };
