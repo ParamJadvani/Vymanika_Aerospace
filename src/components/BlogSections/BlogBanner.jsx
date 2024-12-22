@@ -1,10 +1,13 @@
 import { useTheme } from "@emotion/react";
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Typography, useMediaQuery } from "@mui/material";
 import React from "react";
 import image from "/src/assets/Image PNG/Group.png";
+import cloud from "/src/assets/Image PNG/freepik--Cloud--inject-73.png";
 
 const BlogBanner = () => {
   const theme = useTheme();
+  const isXL = useMediaQuery(theme.breakpoints.up("xl"));
+  const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <Box
       sx={{ width: "100%", overflowX: "hidden", backgroundColor: "#80B3ED" }}
@@ -20,6 +23,44 @@ const BlogBanner = () => {
           },
         }}
       >
+        <Box
+          component="img"
+          src={cloud}
+          sx={{
+            position: "absolute",
+            left: {
+              lg: "-22%",
+              xl: "-18%",
+              md: "-20%",
+              sm: "-40%",
+              xs: "-20%",
+            },
+            width: {
+              sm: "auto",
+              xs: "100px",
+            },
+            top: {
+              xs: "20%",
+            },
+          }}
+        />
+        <Box
+          component="img"
+          src={cloud}
+          sx={{
+            position: "absolute",
+            right: {
+              lg: "-20%",
+              md: "-22%",
+              sm: "-40%",
+              xs: "-30%",
+            },
+            width: {
+              sm: "auto",
+              xs: "200px",
+            },
+          }}
+        />
         <Box
           sx={{
             display: "flex",
