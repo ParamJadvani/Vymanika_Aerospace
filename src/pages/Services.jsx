@@ -14,6 +14,7 @@ import renewable_energy from "/src/assets/CardImage/renewable-energy.png";
 import racing_game from "/src/assets/CardImage/racing-game.png";
 import GridCard from "/src/components/Card/GridCard/GridCard";
 import smallDrone2 from "/src/assets/Image PNG/freepik--drone-3--inject-1-1 copy.png";
+import DroneBanner from "../components/DroneBanner";
 
 const servicesData = [
   {
@@ -148,6 +149,9 @@ const Services = () => {
           />
         }
       />
+
+      {/* Drone Banner */}
+      <DroneBanner />
     </>
   );
 };
