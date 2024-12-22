@@ -19,11 +19,17 @@
   .banner-image {
     height: 400px !important; /* Default height for large screens */
   }
+  .banner-image-big {
+    height: 500px !important; /* Default height for large screens */
+  }
 }
 
 @media (min-width: 1536px) {
   .banner-image {
     height: 500px !important;
+  }
+  .banner-image-big {
+    height: 600px !important; /* Default height for large screens */
   }
 }
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   TextField,
@@ -6,9 +6,55 @@ import {
   Typography,
   Grid,
   Container,
+  Alert,
 } from "@mui/material";
 
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+    setError("");
+    setSuccess(false);
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return emailRegex.test(email);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { name, email, message } = formData;
+
+    if (!name || !email || !message) {
+      setError("All fields are required.");
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      setError("Please enter a valid email address.");
+      return;
+    }
+
+    // Simulate sending a congratulatory email
+    setTimeout(() => {
+      setSuccess(true);
+      setFormData({ name: "", email: "", message: "" }); // Reset form
+    }, 1000);
+  };
+
   return (
     <Container maxWidth="sm" sx={{ py: 5 }}>
       {/* Title */}
@@ -25,9 +71,24 @@ const ContactForm = () => {
         Send a Message
       </Typography>
 
+      {/* Success Message */}
+      {success && (
+        <Alert severity="success" sx={{ mb: 3 }}>
+          Congratulations! Your message has been sent.
+        </Alert>
+      )}
+
+      {/* Error Message */}
+      {error && (
+        <Alert severity="error" sx={{ mb: 3 }}>
+          {error}
+        </Alert>
+      )}
+
       {/* Form Container */}
       <Box
         component="form"
+        onSubmit={handleSubmit}
         sx={{
           padding: { xs: 2, sm: 3 },
         }}
@@ -37,8 +98,11 @@ const ContactForm = () => {
           <Grid item xs={12}>
             <TextField
               fullWidth
+              name="name"
               placeholder="Name"
               variant="outlined"
+              value={formData.name}
+              onChange={handleInputChange}
               InputProps={{
                 sx: {
                   border: "1px solid #000000",
@@ -54,8 +118,11 @@ const ContactForm = () => {
           <Grid item xs={12}>
             <TextField
               fullWidth
+              name="email"
               placeholder="E-Mail"
               variant="outlined"
+              value={formData.email}
+              onChange={handleInputChange}
               InputProps={{
                 sx: {
                   border: "1px solid #000000",
@@ -71,10 +138,13 @@ const ContactForm = () => {
           <Grid item xs={12}>
             <TextField
               fullWidth
+              name="message"
               placeholder="Message"
               variant="outlined"
               multiline
               rows={4}
+              value={formData.message}
+              onChange={handleInputChange}
               InputProps={{
                 sx: {
                   border: "1px solid #000000",
@@ -86,6 +156,7 @@ const ContactForm = () => {
             />
           </Grid>
         </Grid>
+
         {/* Submit Button */}
         <Box
           sx={{
@@ -107,16 +178,16 @@ const ContactForm = () => {
               color: "white",
               fontWeight: 700,
               fontSize: "1rem",
-              textTransform: "none", // Remove uppercase text
+              textTransform: "none",
               borderRadius: "0px",
               boxShadow:
-                "0px 5px 0px #003a8c, 0px 8px 15px rgba(0, 71, 174, 0.2)", // Dual shadow
+                "0px 5px 0px #003a8c, 0px 8px 15px rgba(0, 71, 174, 0.2)",
               "&:hover": {
                 backgroundColor: "#003a8c",
                 boxShadow:
-                  "0px 3px 0px #002b6d, 0px 5px 10px rgba(0, 58, 140, 0.3)", // Hover shadow
+                  "0px 3px 0px #002b6d, 0px 5px 10px rgba(0, 58, 140, 0.3)",
               },
-              transition: "all 0.2s ease", // Smooth transition
+              transition: "all 0.2s ease",
             }}
           >
             Submit

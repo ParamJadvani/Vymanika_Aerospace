@@ -94,6 +94,7 @@ const Services = () => {
                   lg: theme.fontsize.lg,
                   xl: theme.fontsize.xl,
                 },
+                textTransform: "Uppercase",
                 marginBottom: { xs: 2, sm: 3, md: 4 },
 
                 color: theme.headerTextColor,

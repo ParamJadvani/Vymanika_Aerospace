@@ -1,13 +1,19 @@
 // import React from "react";
-import { Box, Container } from "@mui/material";
+import { Box, Container, useMediaQuery } from "@mui/material";
 import "/src/css/banner.css";
 import cloud from "/src/assets/Image PNG/freepik--Cloud--inject-73.png";
 import { useTheme } from "@emotion/react";
 
-const Banner = ({ image, contentDiv, reverse = false }) => {
+const Banner = ({ image, contentDiv, reverse = false, bigImage = false }) => {
   const theme = useTheme();
+  const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg"));
+  const bannerClass = bigImage
+    ? isLargeScreen
+      ? "banner-image-big"
+      : "banner-image"
+    : "banner-image";
   return (
-    <Box sx={{ width: "100%", overflowX: "hidden"}}>
+    <Box sx={{ width: "100%", overflowX: "hidden" }}>
       <Container
         sx={{
           maxWidth: {
@@ -104,7 +110,7 @@ const Banner = ({ image, contentDiv, reverse = false }) => {
             component="img"
             src={image}
             alt="Banner"
-            className="banner-image"
+            className={bannerClass}
             zIndex="123"
           />
 

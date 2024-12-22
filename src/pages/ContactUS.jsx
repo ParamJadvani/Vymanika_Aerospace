@@ -44,6 +44,7 @@ const ContactUS = () => {
                 marginBottom: { xs: 2, sm: 3 },
                 textAlign: "start",
                 width: "100%",
+                textTransform: "Uppercase",
               }}
             >
               CONTACT US

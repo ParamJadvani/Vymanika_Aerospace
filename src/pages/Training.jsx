@@ -76,6 +76,7 @@ const Training = () => {
                 },
                 marginBottom: { xs: 2, sm: 3, md: 4 },
                 textAlign: "start",
+                textTransform: "Uppercase",
                 color: theme.headerTextColor,
               }}
             >
@@ -138,9 +139,6 @@ const Training = () => {
           />
         }
       />
-
-      {/* Drone Banner */}
-      <DroneBanner />
 
       {/* Certification */}
       <Banner_2

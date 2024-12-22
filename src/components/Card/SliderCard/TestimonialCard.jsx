@@ -6,29 +6,19 @@ import "/src/css/TestimonialCard.css";
 // Random quotes array
 const quotes = [
   {
-    text: "Reliable drones and training enhanced our surveying efficiency significantly.",
+    text: "Reliable drones and training enhanced our surveying efficiency significantly!",
     author: "Mahendrasinh Gohel",
     rating: 4,
   },
   {
-    text: "The UAVs provided exceptional aerial data accuracy for our projects.",
-    author: "Anjali Patel",
+    text: "Vymanika Aerospace has transformed our spraying process.",
+    author: "Rahul Singh Rathore",
     rating: 5,
   },
   {
-    text: "Their drone technology revolutionized our agriculture practices!",
-    author: "Ravi Mehta",
-    rating: 5,
-  },
-  {
-    text: "Excellent support and training sessions helped us scale efficiently.",
-    author: "Kiran Shah",
+    text: "Highly efficient and cost-effective solution.",
+    author: "Ankita Arora",
     rating: 4,
-  },
-  {
-    text: "A perfect blend of innovation and reliability in UAV solutions.",
-    author: "Nisha Desai",
-    rating: 5,
   },
 ];
 

@@ -12,13 +12,13 @@ const theme = createTheme({
     laptop: 850,
     desktop: 1150,
   },
-  fontsize:{ 
-      xs: "1.1rem",
-      sm: "2rem",
-      md: "2.2rem",
-      lg: "2.3rem",
-      xl: "3rem",
-    }
+  fontsize: {
+    xs: "1rem",
+    sm: "1.5rem",
+    md: "1.7rem",
+    lg: "1.9rem",
+    xl: "2.4rem",
+  },
 });
 
 const ThemeProvider = ({ children }) => (

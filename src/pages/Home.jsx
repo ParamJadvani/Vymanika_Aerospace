@@ -80,6 +80,7 @@ const Home = () => {
       <Navbar />
       <Banner
         image={bannerimage}
+        bigImage={true}
         contentDiv={
           <Box>
             <Typography
@@ -94,6 +95,7 @@ const Home = () => {
                   xl: theme.fontsize.xl,
                 },
                 textAlign: "start",
+                textTransform: "Uppercase",
                 color: theme.headerTextColor,
               }}
             >
