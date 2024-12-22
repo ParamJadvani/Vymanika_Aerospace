@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import Navbar from "../components/Navbar";
 import Banner from "../components/Banner";
 import { Box, Typography } from "@mui/material";
@@ -35,9 +35,11 @@ const ContactUS = () => {
                   md: "2.8rem",
                   lg: "3rem",
                 },
+                color:theme.headerTextColor,
                 marginBottom: { xs: 2, sm: 3 },
                 textAlign: "start",
                 width: "100%",
+              
               }}
             >
               CONTACT US

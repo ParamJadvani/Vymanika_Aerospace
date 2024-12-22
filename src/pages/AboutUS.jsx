@@ -1,10 +1,12 @@
-import React from "react";
+// import React from "react";
 import Navbar from "../components/Navbar";
 import Banner from "../components/Banner";
 import AboutUs_Banner from "../assets/BannerImage/Aboutus.png";
 import { Box, Typography } from "@mui/material";
+import { useTheme } from "@emotion/react";
 
 const AboutUS = () => {
+  const theme=useTheme()
   return (
     <>
       <Navbar />
@@ -20,6 +22,7 @@ const AboutUS = () => {
                 fontWeight: 900,
                 textAlign: "start",
                 fontSize: { xs: "1.7rem", sm: "2rem" },
+                color:theme.headerTextColor
               }}
             >
               About Vymanika Aerospace

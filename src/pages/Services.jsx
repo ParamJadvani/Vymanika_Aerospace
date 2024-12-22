@@ -1,10 +1,12 @@
-import React from "react";
+// import React from "react";
 import Navbar from "../components/Navbar";
 import Services_banner from "../assets/BannerImage/Service.png";
 import Banner from "../components/Banner";
 import { Box, Typography } from "@mui/material";
+import { useTheme } from "@emotion/react";
 
 const Services = () => {
+  const theme=useTheme()
   return (
     <>
       <Navbar />
@@ -27,6 +29,8 @@ const Services = () => {
                   xl: "3.5rem",
                 },
                 marginBottom: { xs: 2, sm: 3, md: 4 },
+
+                color:theme.headerTextColor,
               }}
             >
               Overview of Services

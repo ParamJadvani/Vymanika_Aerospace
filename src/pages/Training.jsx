@@ -1,10 +1,12 @@
-import React from "react";
+// import React from "react";
 import { Box, Typography } from "@mui/material";
 import Navbar from "../components/Navbar";
 import cap from "../assets/BannerImage/Training.png";
 import Banner from "../components/Banner";
+import { useTheme } from "@emotion/react";
 
 const Training = () => {
+  const theme=useTheme()
   return (
     <>
       <Navbar />
@@ -28,6 +30,7 @@ const Training = () => {
                 },
                 marginBottom: { xs: 2, sm: 3, md: 4 },
                 textAlign: "start",
+                color:theme.headerTextColor,
               }}
             >
               Training Programs Overview
