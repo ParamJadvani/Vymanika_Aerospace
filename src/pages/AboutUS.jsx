@@ -9,6 +9,9 @@ import jadu from "/src/assets/Vector.png";
 import jadu2 from "/src/assets/Vector2.png";
 import vsrp from "/src/assets/SectionImage/Vision statement-rafiki.png";
 import Vision_Section from "/src/components/Vision_Section";
+import Banner_2 from "../components/Banner_2";
+import scb from "../assets/SectionImage/Stamp collecting-bro.png";
+import pob from "../assets/SectionImage/Progress overview-bro.png";
 
 const AboutUS = () => {
   const theme = useTheme();
@@ -63,6 +66,36 @@ const AboutUS = () => {
           </Box>
         }
       />
+
+      <Banner_2
+        title="OUR HISTORY AND KEY MILESTONES"
+        image={scb}
+        contentDiv={
+          <Box
+            sx={{
+              paddingX: { xs: 2, sm: 4 },
+              paddingY: { xs: 2, sm: 4 },
+            }}
+          >
+            <Typography
+              variant="body1"
+              sx={{
+                fontSize: { xs: "1rem", sm: "1.1rem", md: "1.3rem" },
+                lineHeight: 1.6,
+                color: "#000000",
+                fontWeight: 400,
+              }}
+            >
+              Since our inception, Vymanika Aerospace has been dedicated to
+              excellence in UAV development. With each breakthrough, we have
+              strengthened our position as a trusted innovator in the aerospace
+              sector, delivering reliable and high-performance solutions to
+              diverse industries.
+            </Typography>
+          </Box>
+        }
+      />
+
       {/* Vision Section */}
       <Vision_Section
         title="Our Mission"
@@ -79,6 +112,38 @@ const AboutUS = () => {
         smallDroneImage={true}
         description="Vymanika Aerospace envisions a future where unmanned aerial vehicles seamlessly enhance industries and daily life. We aim to lead in UAV innovation, setting new standards and unlocking transformative possibilities in aerospace technology. Our goal is to create a more efficient, connected world through advanced unmanned aviation solutions."
         reverse={true}
+      />
+
+      {/* Banner_2 */}
+      <Banner_2
+      reverse={true}
+        title="INNOVATION FOCUS"
+        image={pob}
+        contentDiv={
+          <Box
+            sx={{
+              paddingX: { xs: 2, sm: 4 },
+              paddingY: { xs: 2, sm: 4 },
+            }}
+          >
+            <Typography
+              variant="body1"
+              sx={{
+                fontSize: { xs: "1rem", sm: "1.1rem", md: "1.3rem" },
+                lineHeight: 1.6,
+                color: "#000000",
+                fontWeight: 400,
+              }}
+            >
+              At Vymanika Aerospace's mission is to advance the aerospace
+              industry with innovative unmanned aerial vehicles (UAVs) and
+              components. We are dedicated to delivering high-performance,
+              reliable solutions that enhance UAV capabilities, meet diverse
+              industry needs, and drive the future of unmanned aviation for a
+              safer, more connected world.
+            </Typography>
+          </Box>
+        }
       />
     </>
   );
