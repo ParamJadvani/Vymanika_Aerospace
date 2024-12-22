@@ -31,8 +31,7 @@ const VisionSection = ({
           },
         }}
       >
-
-{bigDroneImage && (
+        {bigDroneImage && (
           <Box
             component="img"
             src={bigDrone}
@@ -56,31 +55,30 @@ const VisionSection = ({
                 "50%": { transform: "translateY(-10px)" },
                 "100%": { transform: "translateY(0px)" },
               },
-
-        ) : (
-          <Box
-            component="img"
-            src={smallDrone3}
-            className="smallDrone"
-            sx={{
-              position: "absolute",
-              height: { xs: "70px", md: "85px" },
-              zIndex: 100,
-              left: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-3%", xl: "-1%" },
-              top: { xs: "3%", sm: "0%" },
- animation: "float 3s ease-in-out infinite",
-              "@keyframes float": {
-                "0%": { transform: "translateY(0px)" },
-                "50%": { transform: "translateY(-10px)" },
-                "100%": { transform: "translateY(0px)" },
-              },
             }}
           />
         )}
-
-
-      
-                  {smallDroneImage ? (
+        : (
+        <Box
+          component="img"
+          src={smallDrone3}
+          className="smallDrone"
+          sx={{
+            position: "absolute",
+            height: { xs: "70px", md: "85px" },
+            zIndex: 100,
+            left: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-3%", xl: "-1%" },
+            top: { xs: "3%", sm: "0%" },
+            animation: "float 3s ease-in-out infinite",
+            "@keyframes float": {
+              "0%": { transform: "translateY(0px)" },
+              "50%": { transform: "translateY(-10px)" },
+              "100%": { transform: "translateY(0px)" },
+            },
+          }}
+        />
+        )
+        {smallDroneImage ? (
           <Box
             component="img"
             src={smallDrone2}
@@ -119,9 +117,6 @@ const VisionSection = ({
             }}
           />
         )}
-
-
-
         <Box
           sx={{
             display: "flex",
