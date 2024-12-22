@@ -4,6 +4,11 @@ import Banner from "../components/Banner";
 import bannerimage from "../assets/BannerImage/Home.png";
 import { Box, Button, Typography } from "@mui/material";
 import { useTheme } from "@emotion/react";
+import OMV from "../assets/SectionImage/Business Plan-bro.png";
+import jadu from "../assets/Vector.png";
+import jadu2 from "../assets/Vector2.png";
+import vsrp from "../assets/SectionImage/Vision statement-rafiki.png";
+import Vision_Section from "../components/Vision_Section";
 
 const Home = () => {
   const theme = useTheme();
@@ -64,6 +69,20 @@ const Home = () => {
             </Box>
           </Box>
         }
+      />
+      {/* Vision Section */}
+      <Vision_Section
+        title="Our Mission"
+        vectorImage={OMV}
+        backgroundimage={jadu}
+        description="At Vymanika Aerospace's mission is to advance the aerospace industry with innovative unmanned aerial vehicles (UAVs) and components. We are dedicated to delivering high-performance, reliable solutions that enhance UAV capabilities, meet diverse industry needs, and drive the future of unmanned aviation for a safer, more connected world."
+      />
+      <Vision_Section
+        title="Our Vision"
+        vectorImage={vsrp}
+        backgroundimage={jadu2}
+        description="Vymanika Aerospace envisions a future where unmanned aerial vehicles seamlessly enhance industries and daily life. We aim to lead in UAV innovation, setting new standards and unlocking transformative possibilities in aerospace technology. Our goal is to create a more efficient, connected world through advanced unmanned aviation solutions."
+        reverse={true}
       />
     </div>
   );
