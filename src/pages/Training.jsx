@@ -14,6 +14,7 @@ import smallDrone2 from "/src/assets/Image PNG/freepik--drone-3--inject-1-1 copy
 import DroneBanner from "../components/DroneBanner";
 import Banner_2 from "../components/Banner_2";
 import cb from "../assets/SectionImage/Certification-bro.png";
+import Footer from "../components/Footer/Footer";
 
 const trainingData = [
   {
@@ -184,6 +185,9 @@ const Training = () => {
           </Box>
         }
       />
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 };

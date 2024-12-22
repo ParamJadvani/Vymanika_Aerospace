@@ -25,6 +25,8 @@ import blackBigDrone from "/src/assets/Image PNG/freepik--drone-2--inject-1.png"
 import "/src/css/vision_section.css";
 import DroneBanner from "../components/DroneBanner";
 import ContactUsInput from "../components/ContactUsInput";
+import AttachImageFooter from "../components/Footer/AttachImageFooter";
+import Footerimage from "/src/assets/Image PNG/Frame 188 copy.png";
 
 const servicesData = [
   {
@@ -141,7 +143,7 @@ const Home = () => {
                   fontWeight: 700,
                   border: "2px solid #5C76DD",
                 }}
-                onClick={() => navigate("/about")}
+                onClick={() => navigate("/aboutus")}
               >
                 Know More
               </Button>
@@ -238,6 +240,9 @@ const Home = () => {
 
       {/* Contact Us */}
       <ContactUsInput />
+
+      {/* Footer */}
+      <AttachImageFooter image={Footerimage} />
     </>
   );
 };

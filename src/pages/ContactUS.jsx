@@ -7,6 +7,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { Phone, Email } from "@mui/icons-material";
 import { useTheme } from "@emotion/react";
 import ContactUSMap from "../components/ContactUSMap/ContactUSMap";
+import Footer from "../components/Footer/Footer";
 
 const ContactUS = () => {
   const theme = useTheme();
@@ -157,6 +158,9 @@ const ContactUS = () => {
 
       {/* Contact US Map */}
       <ContactUSMap />
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 };

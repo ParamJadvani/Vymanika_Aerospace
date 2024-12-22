@@ -12,6 +12,8 @@ import Vision_Section from "/src/components/Vision_Section";
 import Banner_2 from "../components/Banner_2";
 import scb from "../assets/SectionImage/Stamp collecting-bro.png";
 import pob from "../assets/SectionImage/Progress overview-bro.png";
+import AttachImageFooter from "../components/Footer/AttachImageFooter";
+import Footerimage from "/src/assets/Image PNG/Frame 187.png";
 
 const AboutUS = () => {
   const theme = useTheme();
@@ -116,7 +118,7 @@ const AboutUS = () => {
 
       {/* Banner_2 */}
       <Banner_2
-      reverse={true}
+        reverse={true}
         title="INNOVATION FOCUS"
         image={pob}
         contentDiv={
@@ -145,6 +147,9 @@ const AboutUS = () => {
           </Box>
         }
       />
+
+      {/* Footer */}
+      <AttachImageFooter image={Footerimage} />
     </>
   );
 };
