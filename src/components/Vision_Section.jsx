@@ -1,5 +1,3 @@
-// Import necessary MUI components and hooks
-// import React from "react";
 import { Box, Typography, Container } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import "/src/css/vision_section.css";
@@ -20,6 +18,17 @@ const VisionSection = ({
   const theme = useTheme();
   return (
     <Box sx={{ width: "100%", overflowX: "hidden", marginY: 10 }}>
+      {/* Inject the keyframes animation into the document */}
+      <style>
+        {`
+          @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+          }
+        `}
+      </style>
+
       <Container
         sx={{
           maxWidth: {
@@ -31,7 +40,7 @@ const VisionSection = ({
           },
         }}
       >
-        {bigDroneImage && (
+        {bigDroneImage ? (
           <Box
             component="img"
             src={bigDrone}
@@ -50,34 +59,24 @@ const VisionSection = ({
               },
               top: { xs: "-1%", sm: "1%", md: "0%", lg: "1%", xl: "2%" },
               animation: "float 3s ease-in-out infinite",
-              "@keyframes float": {
-                "0%": { transform: "translateY(0px)" },
-                "50%": { transform: "translateY(-10px)" },
-                "100%": { transform: "translateY(0px)" },
-              },
+            }}
+          />
+        ) : (
+          <Box
+            component="img"
+            src={smallDrone3}
+            className="smallDrone"
+            sx={{
+              position: "absolute",
+              height: { xs: "70px", md: "85px" },
+              zIndex: 100,
+              left: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-3%", xl: "-1%" },
+              top: { xs: "3%", sm: "0%" },
+              animation: "float 3s ease-in-out infinite",
             }}
           />
         )}
-        : (
-        <Box
-          component="img"
-          src={smallDrone3}
-          className="smallDrone"
-          sx={{
-            position: "absolute",
-            height: { xs: "70px", md: "85px" },
-            zIndex: 100,
-            left: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-3%", xl: "-1%" },
-            top: { xs: "3%", sm: "0%" },
-            animation: "float 3s ease-in-out infinite",
-            "@keyframes float": {
-              "0%": { transform: "translateY(0px)" },
-              "50%": { transform: "translateY(-10px)" },
-              "100%": { transform: "translateY(0px)" },
-            },
-          }}
-        />
-        )
+
         {smallDroneImage ? (
           <Box
             component="img"
@@ -90,11 +89,6 @@ const VisionSection = ({
               right: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-3%", xl: "-1%" },
               top: { xs: "3%", sm: "0%" },
               animation: "float 4s ease-in-out infinite",
-              "@keyframes float": {
-                "0%": { transform: "translateY(0px)" },
-                "50%": { transform: "translateY(-8px)" },
-                "100%": { transform: "translateY(0px)" },
-              },
             }}
           />
         ) : (
@@ -109,14 +103,10 @@ const VisionSection = ({
               right: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-3%", xl: "-1%" },
               top: { xs: "-1%", sm: "1%", md: "0%", lg: "1%", xl: "2%" },
               animation: "float 4s ease-in-out infinite",
-              "@keyframes float": {
-                "0%": { transform: "translateY(0px)" },
-                "50%": { transform: "translateY(-8px)" },
-                "100%": { transform: "translateY(0px)" },
-              },
             }}
           />
         )}
+
         <Box
           sx={{
             display: "flex",
