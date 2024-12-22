@@ -17,7 +17,7 @@ const VisionSection = ({
   smallDroneImage = false,
 }) => {
   const theme = useTheme();
-
+  console.log(theme.fontsize);
   return (
     <Box sx={{ width: "100%", overflowX: "hidden", mt: { sm: 10, xs: 8 } }}>
       <Container
@@ -41,7 +41,13 @@ const VisionSection = ({
               position: "absolute",
               height: { xs: "110px", md: "140px", lg: "150px" },
               zIndex: 100,
-              left: { xs: "-1%", sm: "-14%", md: "-8%", lg: "-8%" },
+              left: {
+                xs: "-1%",
+                sm: "-14%",
+                md: "-8%",
+                lg: "-5%",
+                xl: "-1.5%",
+              },
               top: { xs: "-1%", sm: "1%", md: "0%", lg: "-4%", xl: "-2%" },
             }}
           />
@@ -56,7 +62,7 @@ const VisionSection = ({
               position: "absolute",
               height: { xs: "90px", md: "100px", lg: "115px" },
               zIndex: 100,
-              right: { xs: "-0%", sm: "-5%", md: "-5%" },
+              right: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-3%", xl: "-1%" },
               top: { xs: "3%", sm: "0%" },
             }}
           />
@@ -69,7 +75,7 @@ const VisionSection = ({
               position: "absolute",
               height: { xs: "70px", md: "85px" },
               zIndex: 100,
-              right: { xs: "-0%", sm: "-5%", md: "-5%" },
+              right: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-3%", xl: "-1%" },
               top: { xs: "50%", lg: "0%" },
             }}
           />
@@ -91,11 +97,13 @@ const VisionSection = ({
               textAlign: "center",
               fontWeight: 900,
               fontStyle: "capitalize",
+              color: theme.headerTextColor,
               fontSize: {
-                xs: "1.5rem",
-                sm: "2rem",
-                lg: "2.5rem",
-                xl: "2.7rem",
+                xs: theme.fontsize.xs,
+                sm: theme.fontsize.sm,
+                md: theme.fontsize.md,
+                lg: theme.fontsize.lg,
+                xl: theme.fontsize.xl,
               },
               marginBottom: { xs: "0.5rem", lg: "2.2rem" },
               width: "100%",
