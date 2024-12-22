@@ -23,7 +23,7 @@ const ScrollToTop = () => {
 const Router = () => {
   const routes = [
     { path: "/", element: <Home /> },
-    { path: "/about", element: <AboutUS /> },
+    { path: "/aboutus", element: <AboutUS /> },
     { path: "/services", element: <Services /> },
     { path: "/contact", element: <ContactUS /> },
     { path: "/training", element: <Training /> },

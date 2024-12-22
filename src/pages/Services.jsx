@@ -15,6 +15,8 @@ import racing_game from "/src/assets/CardImage/racing-game.png";
 import GridCard from "/src/components/Card/GridCard/GridCard";
 import smallDrone2 from "/src/assets/Image PNG/freepik--drone-3--inject-1-1 copy.png";
 import DroneBanner from "../components/DroneBanner";
+import AttachImageFooter from "../components/Footer/AttachImageFooter";
+import Footerimage from "/src/assets/Image PNG/Frame 187.png";
 
 const servicesData = [
   {
@@ -152,6 +154,9 @@ const Services = () => {
 
       {/* Drone Banner */}
       <DroneBanner />
+
+      {/* Footer */}
+      <AttachImageFooter image={Footerimage} />
     </>
   );
 };

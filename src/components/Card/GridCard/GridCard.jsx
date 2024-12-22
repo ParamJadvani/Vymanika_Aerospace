@@ -17,12 +17,12 @@ const GridCard = ({
       className="bigDrone"
       sx={{
         position: "absolute",
-        height: { xs: "110px", md: "140px", lg: "150px" },
+        height: { xs: "110px", md: "130px", lg: "150px" },
         zIndex: 100,
         left: {
           xs: "-1%",
           sm: "-14%",
-          md: "-8%",
+          md: "-7%",
           lg: "-7%",
           xl: "-5.5%",
         },
