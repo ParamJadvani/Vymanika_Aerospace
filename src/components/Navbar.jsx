@@ -86,13 +86,21 @@ const Navbar = () => {
     <AppBar
       position="relative"
       sx={{
-
         maxWidth: "100vw",
         backgroundColor: theme.navFooterBackgroundColor,
         color: theme.textColor,
       }}
     >
-      <Container maxWidth="xl">
+      <Container
+        sx={{
+          maxWidth: {
+            sm: theme.values.tablet,
+            md: theme.values.laptop,
+            lg: theme.values.desktop,
+            xl: "xl",
+          },
+        }}
+      >
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           {/* Animated Logo */}
           <motion.div
@@ -190,14 +198,16 @@ const Navbar = () => {
                           onClick={toggleDrawer(false)}
                           sx={{
                             justifyContent: "space-between",
-                            textAlign:'left',
+                            textAlign: "left",
                             color: "white",
                           }}
                         >
                           <ListItemIcon sx={{ color: "white" }}>
                             {item.icon}
                           </ListItemIcon>
-                          <Typography sx={{width:'100%'}}>{item.label}</Typography>
+                          <Typography sx={{ width: "100%" }}>
+                            {item.label}
+                          </Typography>
                         </ListItem>
                       </motion.div>
                     ))}
