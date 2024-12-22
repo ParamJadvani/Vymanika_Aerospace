@@ -83,12 +83,37 @@
   .bigDrone {
     left: -4% !important;
   }
+
   .smallDrone{
     left: -4% !important;
+
+  .smallDrone {
+    height: 50px !important;
+
   }
 
 }
 
+
+
+
+@media (min-width: 520px) and (max-width: 600px) {
+  .smallDroneDroneBanner {
+    top: 50% !important;
+  }
+}
+
+@media (min-width: 420px) and (max-width: 520px) {
+  .smallDroneDroneBanner {
+    top: 42% !important;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 355px) {
+  .smallDroneDroneBanner {
+    top: 27% !important;
+  }
+}
 
 
 

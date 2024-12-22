@@ -25,7 +25,7 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import logo from "../assets/LOGO.png";
+import logo from "/src/assets/LOGO.png";
 
 const Navbar = () => {
   const theme = useTheme();
@@ -36,7 +36,7 @@ const Navbar = () => {
 
   const menuItems = [
     { to: "/", label: "Home", icon: <Home /> },
-    { to: "/about", label: "About Us", icon: <Info /> },
+    { to: "/aboutus", label: "About Us", icon: <Info /> },
     { to: "/services", label: "Services", icon: <BuildCircle /> },
     { to: "/training", label: "Training", icon: <School /> },
     { to: "/contact", label: "Contact Us", icon: <Email /> },

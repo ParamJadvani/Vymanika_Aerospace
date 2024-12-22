@@ -1,11 +1,13 @@
 // import React from "react";
-import Navbar from "../components/Navbar";
-import Banner from "../components/Banner";
+import Navbar from "/src/components/Navbar";
+import Banner from "/src/components/Banner";
 import { Box, Typography, useMediaQuery } from "@mui/material";
-import cu from "../assets/BannerImage/Contactus.png";
+import cu from "/src/assets/BannerImage/Contactus.png";
 import { FaLocationDot } from "react-icons/fa6";
 import { Phone, Email } from "@mui/icons-material";
 import { useTheme } from "@emotion/react";
+import ContactUSMap from "../components/ContactUSMap/ContactUSMap";
+import Footer from "../components/Footer/Footer";
 
 const ContactUS = () => {
   const theme = useTheme();
@@ -31,17 +33,18 @@ const ContactUS = () => {
               variant={isXL ? "h3" : isSmall ? "h5" : "h4"}
               sx={{
                 fontWeight: "900",
-                fontsize:{
-                  xs:theme.fontsize.xs,
-                  sm:theme.fontsize.sm,
-                  md:theme.fontsize.md,
-                  lg:theme.fontsize.lg,
-                  xl:theme.fontsize.xl,
-                  },
+                fontsize: {
+                  xs: theme.fontsize.xs,
+                  sm: theme.fontsize.sm,
+                  md: theme.fontsize.md,
+                  lg: theme.fontsize.lg,
+                  xl: theme.fontsize.xl,
+                },
                 color: theme.headerTextColor,
                 marginBottom: { xs: 2, sm: 3 },
                 textAlign: "start",
                 width: "100%",
+                textTransform: "Uppercase",
               }}
             >
               CONTACT US
@@ -153,6 +156,12 @@ const ContactUS = () => {
           </Box>
         }
       />
+
+      {/* Contact US Map */}
+      <ContactUSMap />
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 };
