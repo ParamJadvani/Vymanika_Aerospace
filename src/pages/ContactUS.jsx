@@ -12,7 +12,6 @@ import Footerimage from "/src/assets/Image PNG/Group 55.png";
 import Footer from "../components/Footer/Footer";
 import smallDrone4 from "../assets/Image PNG/freepik--drone-3--inject-1.png";
 
-
 const ContactUS = () => {
   const theme = useTheme();
   const isXL = useMediaQuery(theme.breakpoints.up("xl"));
@@ -40,8 +39,14 @@ const ContactUS = () => {
                 position: "absolute",
                 height: { xs: "70px", md: "85px" },
                 zIndex: 100,
-                left: { xs: "-0%", sm: "-5%", md: "-5%", lg: "-2%", xl: "-1%" },
-                top: { xs: "30%", sm: "48%", md: "48%", lg: "8%" },
+                left: {
+                  xs: "-1.5%",
+                  sm: "-7%",
+                  md: "-5%",
+                  lg: "-5%",
+                  xl: "-4%",
+                },
+                top: { xs: "2%", sm: "56%", md: "53%", lg: "1%", xl: "5%" },
                 animation: "float 4s ease-in-out infinite",
               }}
             />
@@ -175,7 +180,7 @@ const ContactUS = () => {
       />
 
       {/* Contact US Map */}
-      
+
       <ContactUSMap />
 
       {/* Footer */}

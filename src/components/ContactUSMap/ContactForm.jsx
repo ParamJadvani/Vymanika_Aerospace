@@ -8,8 +8,11 @@ import {
   Container,
   Alert,
 } from "@mui/material";
+import { useForm, ValidationError } from "@formspree/react";
 
 const ContactForm = () => {
+  const [state, handleSubmit] = useForm("xpwwzlqr");
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,32 +31,34 @@ const ContactForm = () => {
     setError("");
     setSuccess(false);
   };
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
+  // const validateEmail = (email) => {
+  //   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  //   return emailRegex.test(email);
+  // };
 
-  const validateEmail = (email) => {
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    return emailRegex.test(email);
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const { name, email, message } = formData;
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const { name, email, message } = formData;
+  //   if (!name || !email || !message) {
+  //     setError("All fields are required.");
+  //     return;
+  //   }
 
-    if (!name || !email || !message) {
-      setError("All fields are required.");
-      return;
-    }
+  //   if (!validateEmail(email)) {
+  //     setError("Please enter a valid email address.");
+  //     return;
+  //   }
 
-    if (!validateEmail(email)) {
-      setError("Please enter a valid email address.");
-      return;
-    }
-
-    // Simulate sending a congratulatory email
-    setTimeout(() => {
-      setSuccess(true);
-      setFormData({ name: "", email: "", message: "" }); // Reset form
-    }, 1000);
-  };
+  //   // Simulate sending a congratulatory email
+  //   setTimeout(() => {
+  //     setSuccess(true);
+  //     setFormData({ name: "", email: "", message: "" }); // Reset form
+  //   }, 1000);
+  // };
 
   return (
     <Container maxWidth="sm" sx={{ py: 5 }}>
