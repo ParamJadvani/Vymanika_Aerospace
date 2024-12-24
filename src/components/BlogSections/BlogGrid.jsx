@@ -33,11 +33,11 @@ const BlogGrid = ({ blogData = [] }) => {
           display: "flex",
           flexDirection: {
             xs: "column", // Stack vertically on small screens
-            md: "row", // Row on small screens and up
+            md: "row", // Row on medium screens and up
             lg: "row", // Row on large screens
           },
           justifyContent: "space-between",
-          alignItems: "center",
+          alignItems: "flex-start",
           gap: 2, // Adds spacing between the cards
         }}
       >
@@ -57,20 +57,27 @@ const BlogGrid = ({ blogData = [] }) => {
               position: "relative",
               display: "flex",
               flexDirection: "column",
-              justifyContent: "flex-start",
+              justifyContent: "space-between",
               overflow: "hidden",
-              height: "100%",
+              height: {
+                xs: "auto", // Flexible height on small screens
+                md: "450px", // Fixed height on medium screens
+                xl: "600px", // Larger height on xl screens
+              },
               borderRadius: "0px",
             }}
           >
-            {/* Icon Section */}
+            {/* Image Section */}
             <Box
               sx={{
                 display: "flex",
                 justifyContent: "center", // Centering the image
                 alignItems: "center",
                 width: "100%",
-                height: "300px", // Fixed height for image
+                height: {
+                  xs: "300px", // Default height for image
+                  xl: "100%", // Increase image height on xl screens
+                },
                 overflow: "hidden", // Ensure no overflow
               }}
             >
@@ -90,15 +97,16 @@ const BlogGrid = ({ blogData = [] }) => {
             {/* Title and Description Section */}
             <CardContent
               sx={{
-                flexGrow: 1,
+                flexGrow: { xs: 1, xl: undefined },
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
                 overflow: "hidden",
-                marginTop: 1,
-                padding: 2, // Optimized padding
+                padding: 2,
+                height: "100%", // Ensure the height is flexible
               }}
             >
+              {/* Title */}
               <Typography
                 component="div"
                 sx={{
@@ -110,17 +118,21 @@ const BlogGrid = ({ blogData = [] }) => {
                     sm: "1rem",
                     md: "1.1rem",
                     lg: "1.2rem",
+                    xl: "1.6rem", // Larger font size on xl screens
                   },
-                  height: "30%",
                   paddingBottom: 1,
+                  marginBottom: 1, // Space below the title
                 }}
               >
                 {item.title}
               </Typography>
 
+              {/* Description */}
               <Box
                 sx={{
-                  height: "70%", // Adjusted height to fit content better
+                  flexGrow: 1, // Makes this section flexible
+                  overflow: "hidden",
+                  marginBottom: 1, // Space below the description
                 }}
               >
                 <Typography
@@ -134,6 +146,7 @@ const BlogGrid = ({ blogData = [] }) => {
                       xs: "0.95rem",
                       sm: "1rem",
                       lg: "1.1rem",
+                      xl: "1.42rem", // Larger font size on xl screens
                     },
                   }}
                 >
@@ -141,12 +154,14 @@ const BlogGrid = ({ blogData = [] }) => {
                 </Typography>
               </Box>
 
+              {/* Button Section */}
               <Box
                 sx={{
                   display: "flex",
-                  justifyContent: "flex-end", // Align button to the right
-                  marginTop: "10px",
+                  flexDirection: "column", // Stack vertically to ensure alignment
+                  alignItems: "flex-start", // Align the button to the start
                   width: "100%",
+                  marginTop: "auto", // Pushes the button to the bottom
                 }}
               >
                 <Button
@@ -157,7 +172,7 @@ const BlogGrid = ({ blogData = [] }) => {
                     color: theme.headerTextColor,
                     textTransform: "none",
                     fontWeight: "bold",
-                    fontSize: "1rem",
+                    fontSize: "0.95rem",
                     "&:hover": {
                       backgroundColor: theme.headerTextColor,
                       color: "#ffffff",
@@ -167,8 +182,8 @@ const BlogGrid = ({ blogData = [] }) => {
                   Know More
                   <Box
                     sx={{
-                      width: "24px",
-                      height: "24px",
+                      width: "22px",
+                      height: "22px",
                       backgroundColor: theme.headerTextColor,
                       borderRadius: "50%",
                       display: "flex",
@@ -179,8 +194,8 @@ const BlogGrid = ({ blogData = [] }) => {
                   >
                     <Box
                       sx={{
-                        width: "7.5px",
-                        height: "7.5px",
+                        width: "7px",
+                        height: "7px",
                         borderRight: "2px solid white",
                         borderBottom: "2px solid white",
                         transform: "rotate(-45deg)",

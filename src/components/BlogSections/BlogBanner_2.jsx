@@ -62,7 +62,7 @@ const BlogBanner_2 = ({ bigImage = true }) => {
               justifyContent: "center", // Center image horizontally
               alignItems: "center", // Center image vertically
               width: "100%", // Ensure it takes full width in the container
-              maxHeight: isLargeScreen ? "400px" : "300px", // Adjust based on screen size
+              // maxHeight: isLargeScreen ? "400px" : "300px", // Adjust based on screen size
               overflow: "hidden", // Prevent the image from overflowing the container
             }}
           >

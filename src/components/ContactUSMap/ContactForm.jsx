@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Box,
   TextField,
@@ -8,7 +8,8 @@ import {
   Container,
   Alert,
 } from "@mui/material";
-import { useForm, ValidationError } from "@formspree/react";
+import { useForm } from "@formspree/react";
+import { CheckCircleOutline, ErrorOutline } from "@mui/icons-material";
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("xeooqrpk");
@@ -29,36 +30,25 @@ const ContactForm = () => {
       [name]: value,
     }));
     setError("");
-    setSuccess(false);
   };
-  if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
-  }
-  // const validateEmail = (email) => {
-  //   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-  //   return emailRegex.test(email);
-  // };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const { name, email, message } = formData;
+  // Handle form submission state
+  useEffect(() => {
+    if (state.succeeded) {
+      setSuccess(true);
+      setFormData({ name: "", email: "", message: "" }); // Reset form
+    } else if (state?.errors?.length) {
+      setError("Something went wrong! Please try again.");
+    }
+  }, [state.succeeded, state.errors]);
 
-  //   if (!name || !email || !message) {
-  //     setError("All fields are required.");
-  //     return;
-  //   }
-
-  //   if (!validateEmail(email)) {
-  //     setError("Please enter a valid email address.");
-  //     return;
-  //   }
-
-  //   // Simulate sending a congratulatory email
-  //   setTimeout(() => {
-  //     setSuccess(true);
-  //     setFormData({ name: "", email: "", message: "" }); // Reset form
-  //   }, 1000);
-  // };
+  // Auto-dismiss logic for error
+  useEffect(() => {
+    if (error) {
+      const timer = setTimeout(() => setError(""), 5000); // Hide error after 5 seconds
+      return () => clearTimeout(timer);
+    }
+  }, [error]);
 
   return (
     <Container maxWidth="sm" sx={{ py: 5 }}>
@@ -78,127 +68,189 @@ const ContactForm = () => {
 
       {/* Success Message */}
       {success && (
-        <Alert severity="success" sx={{ mb: 3 }}>
-          Congratulations! Your message has been sent.
+        <Alert
+          severity="success"
+          sx={{
+            mb: 3,
+            display: "flex",
+            alignItems: "center",
+            backgroundColor: "#0047AE",
+            color: "white",
+            borderRadius: "0px",
+            boxShadow: "5px 5px 0px rgba(0, 71, 174, 1)",
+          }}
+          icon={
+            <CheckCircleOutline
+              sx={{
+                color: "white",
+                fontSize: "30px",
+                mr: 2,
+              }}
+            />
+          }
+        >
+          <Typography
+            variant="h6"
+            fontWeight="bold"
+            color="inherit"
+            gutterBottom
+          >
+            Thank you!
+          </Typography>
+          <Typography variant="body2" color="inherit">
+            Your message has been successfully sent.
+          </Typography>
         </Alert>
       )}
 
       {/* Error Message */}
       {error && (
-        <Alert severity="error" sx={{ mb: 3 }}>
-          {error}
+        <Alert
+          severity="error"
+          sx={{
+            mb: 3,
+            display: "flex",
+            alignItems: "center",
+            backgroundColor: "#FDECEA",
+            color: "#B71C1C",
+            border: "1px solid #F5C2C0",
+            borderRadius: "0px",
+            boxShadow: "5px 5px 0px rgba(244, 67, 54, 0.5)",
+          }}
+          icon={
+            <ErrorOutline
+              sx={{
+                color: "#D32F2F",
+                fontSize: "30px",
+                mr: 2,
+              }}
+            />
+          }
+        >
+          <Typography
+            variant="h6"
+            fontWeight="bold"
+            color="#D32F2F"
+            gutterBottom
+          >
+            Oops!
+          </Typography>
+          <Typography variant="body2" color="#B71C1C">
+            {error}
+          </Typography>
         </Alert>
       )}
 
-      {/* Form Container */}
-      <Box
-        component="form"
-        onSubmit={handleSubmit}
-        sx={{
-          padding: { xs: 2, sm: 3 },
-        }}
-      >
-        <Grid container spacing={2}>
-          {/* Name Field */}
-          <Grid item xs={12}>
-            <TextField
-              fullWidth
-              name="name"
-              placeholder="Name"
-              variant="outlined"
-              value={formData.name}
-              onChange={handleInputChange}
-              InputProps={{
-                sx: {
-                  border: "1px solid #000000",
-                  boxShadow: "5px 5px 0px rgba(0, 71, 174, 1)",
-                  background: "white",
-                  borderRadius: "0px",
-                },
-              }}
-            />
-          </Grid>
-
-          {/* Email Field */}
-          <Grid item xs={12}>
-            <TextField
-              fullWidth
-              name="email"
-              placeholder="E-Mail"
-              variant="outlined"
-              value={formData.email}
-              onChange={handleInputChange}
-              InputProps={{
-                sx: {
-                  border: "1px solid #000000",
-                  boxShadow: "5px 5px 0px rgba(0, 71, 174, 1)",
-                  background: "white",
-                  borderRadius: "0px",
-                },
-              }}
-            />
-          </Grid>
-
-          {/* Message Field */}
-          <Grid item xs={12}>
-            <TextField
-              fullWidth
-              name="message"
-              placeholder="Message"
-              variant="outlined"
-              multiline
-              rows={4}
-              value={formData.message}
-              onChange={handleInputChange}
-              InputProps={{
-                sx: {
-                  border: "1px solid #000000",
-                  boxShadow: "5px 5px 0px rgba(0, 71, 174, 1)",
-                  background: "white",
-                  borderRadius: "0px",
-                },
-              }}
-            />
-          </Grid>
-        </Grid>
-
-        {/* Submit Button */}
+      {/* Form */}
+      {!success && (
         <Box
+          component="form"
+          onSubmit={handleSubmit}
           sx={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            marginTop: 3,
-            marginInline: "auto",
-            borderRadius: "0px",
+            padding: { xs: 2, sm: 3 },
           }}
         >
-          <Button
-            type="submit"
-            variant="contained"
+          <Grid container spacing={2}>
+            {/* Name Field */}
+            <Grid item xs={12}>
+              <TextField
+                fullWidth
+                name="name"
+                placeholder="Name"
+                variant="outlined"
+                value={formData.name}
+                onChange={handleInputChange}
+                InputProps={{
+                  sx: {
+                    border: "1px solid #000000",
+                    boxShadow: "5px 5px 0px rgba(0, 71, 174, 1)",
+                    background: "white",
+                    borderRadius: "0px",
+                  },
+                }}
+              />
+            </Grid>
+
+            {/* Email Field */}
+            <Grid item xs={12}>
+              <TextField
+                fullWidth
+                name="email"
+                placeholder="E-Mail"
+                variant="outlined"
+                value={formData.email}
+                onChange={handleInputChange}
+                InputProps={{
+                  sx: {
+                    border: "1px solid #000000",
+                    boxShadow: "5px 5px 0px rgba(0, 71, 174, 1)",
+                    background: "white",
+                    borderRadius: "0px",
+                  },
+                }}
+              />
+            </Grid>
+
+            {/* Message Field */}
+            <Grid item xs={12}>
+              <TextField
+                fullWidth
+                name="message"
+                placeholder="Message"
+                variant="outlined"
+                multiline
+                rows={4}
+                value={formData.message}
+                onChange={handleInputChange}
+                InputProps={{
+                  sx: {
+                    border: "1px solid #000000",
+                    boxShadow: "5px 5px 0px rgba(0, 71, 174, 1)",
+                    background: "white",
+                    borderRadius: "0px",
+                  },
+                }}
+              />
+            </Grid>
+          </Grid>
+
+          {/* Submit Button */}
+          <Box
             sx={{
-              width: "50%",
-              backgroundColor: "#0047AE",
-              color: "white",
-              fontWeight: 700,
-              fontSize: "1rem",
-              textTransform: "none",
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: 3,
               borderRadius: "0px",
-              boxShadow:
-                "0px 5px 0px #003a8c, 0px 8px 15px rgba(0, 71, 174, 0.2)",
-              "&:hover": {
-                backgroundColor: "#003a8c",
-                boxShadow:
-                  "0px 3px 0px #002b6d, 0px 5px 10px rgba(0, 58, 140, 0.3)",
-              },
-              transition: "all 0.2s ease",
             }}
           >
-            Submit
-          </Button>
+            <Button
+              type="submit"
+              variant="contained"
+              sx={{
+                width: "50%",
+                backgroundColor: "#0047AE",
+                color: "white",
+                fontWeight: 700,
+                fontSize: "1rem",
+                textTransform: "none",
+                borderRadius: "0px",
+                boxShadow:
+                  "0px 5px 0px #003a8c, 0px 8px 15px rgba(0, 71, 174, 0.2)",
+                "&:hover": {
+                  backgroundColor: "#003a8c",
+                  boxShadow:
+                    "0px 3px 0px #002b6d, 0px 5px 10px rgba(0, 58, 140, 0.3)",
+                },
+                transition: "all 0.2s ease",
+              }}
+            >
+              Submit
+            </Button>
+          </Box>
         </Box>
-      </Box>
+      )}
     </Container>
   );
 };
