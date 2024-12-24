@@ -4,7 +4,13 @@ import "/src/css/banner.css";
 import cloud from "/src/assets/Image PNG/freepik--Cloud--inject-73.png";
 import { useTheme } from "@emotion/react";
 
-const Banner = ({ image, contentDiv, reverse = false, bigImage = false }) => {
+const Banner = ({
+  image,
+  contentDiv,
+  reverse = false,
+  bigImage = false,
+  margin = true,
+}) => {
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg"));
   const bannerClass = bigImage
@@ -22,6 +28,7 @@ const Banner = ({ image, contentDiv, reverse = false, bigImage = false }) => {
             lg: theme.values.desktop,
             xl: "xl",
             position: "relative",
+            height: "60vh",
           },
         }}
       >
@@ -103,6 +110,7 @@ const Banner = ({ image, contentDiv, reverse = false, bigImage = false }) => {
             },
             alignItems: "center",
             height: "100%",
+            // marginTop: margin ? 30 : 0,
           }}
         >
           {/* Image */}
@@ -112,10 +120,13 @@ const Banner = ({ image, contentDiv, reverse = false, bigImage = false }) => {
             alt="Banner"
             className={bannerClass}
             zIndex="123"
+            sx={{
+              objectFit: "contain",
+            }}
           />
 
           {/* Content */}
-          <Box sx={{ flex: 1, zIndex: 120 }}>{contentDiv}</Box>
+          <Box sx={{ zIndex: 120 }}>{contentDiv}</Box>
         </Box>
 
         {/* Bottom Cloud Boxes */}

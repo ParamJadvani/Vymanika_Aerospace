@@ -45,13 +45,9 @@ const BlogGrid = ({ blogData = [] }) => {
           <Card
             key={index}
             sx={{
-              width: {
-                xs: "100%", // Full width on small screens
-                md: "48%", // Slightly less than half on larger screens
-                lg: "48%",
-              },
+              width: "100%",
               backgroundColor: "transparent",
-              border: "1px solid #000000",
+              border: "1px solid black",
               boxShadow:
                 "5px 5px 0px rgba(0, 71, 174,1), -1px 0px 0px rgba(0, 71, 174,1)",
               position: "relative",
@@ -64,7 +60,7 @@ const BlogGrid = ({ blogData = [] }) => {
                 md: "450px", // Fixed height on medium screens
                 xl: "600px", // Larger height on xl screens
               },
-              borderRadius: "0px",
+              borderRadius: "1px solid black",
             }}
           >
             {/* Image Section */}
@@ -75,10 +71,11 @@ const BlogGrid = ({ blogData = [] }) => {
                 alignItems: "center",
                 width: "100%",
                 height: {
-                  xs: "300px", // Default height for image
+                  xs: "100%", // Default height for image
                   xl: "100%", // Increase image height on xl screens
                 },
-                overflow: "hidden", // Ensure no overflow
+                overflow: "hidden",
+                objectFit: "cover",
               }}
             >
               <CardMedia
@@ -86,7 +83,7 @@ const BlogGrid = ({ blogData = [] }) => {
                 src={item.image}
                 alt={item.title}
                 sx={{
-                  objectFit: "cover", // Ensures the image covers the area
+                  objectFit: "contain", // Ensures the image covers the area
                   width: "100%", // Fill the width of the container
                   height: "100%", // Fill the height of the container
                   imageRendering: "auto", // Avoids blurry images
@@ -159,9 +156,9 @@ const BlogGrid = ({ blogData = [] }) => {
                 sx={{
                   display: "flex",
                   flexDirection: "column", // Stack vertically to ensure alignment
-                  alignItems: "flex-start", // Align the button to the start
+                  alignItems: "flex-end", // Align the button to the start
                   width: "100%",
-                  marginTop: "auto", // Pushes the button to the bottom
+                  marginTop: "auto",
                 }}
               >
                 <Button

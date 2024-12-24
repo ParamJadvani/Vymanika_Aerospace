@@ -14,11 +14,6 @@ const BlogBanner_2 = ({ bigImage = true }) => {
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg"));
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  const bannerClass = bigImage
-    ? isLargeScreen
-      ? "banner-image-big"
-      : "banner-image"
-    : "banner-image";
 
   return (
     <Box
@@ -70,10 +65,13 @@ const BlogBanner_2 = ({ bigImage = true }) => {
               component="img"
               src={image}
               alt="Banner"
-              className={bannerClass}
               sx={{
                 objectFit: "cover", // Ensure the image scales appropriately
-                width: "100%",
+                width: {
+                  lg: "100%",
+                  md: "450px",
+                  xs: "100%",
+                },
                 height: "100%",
               }}
             />
