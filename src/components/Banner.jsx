@@ -28,7 +28,6 @@ const Banner = ({
             lg: theme.values.desktop,
             xl: "xl",
             position: "relative",
-            height: "60vh",
           },
         }}
       >
