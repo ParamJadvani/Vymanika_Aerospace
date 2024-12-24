@@ -77,48 +77,73 @@ const Footer = () => {
           {/* Pages Links */}
           <Grid item xs={12} md={6} lg={3}>
             <Section
-              title="Pages"
-              padding={8}
-              content={
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: 1.5,
-                  }}
-                >
-                  {["About Us", "Services", "Training", "Blog"].map(
-                    (page, idx) => (
-                      <Link
-                        key={idx}
-                        to={`/${page.toLowerCase().replace(/\s+/g, "")}`}
-                        style={{
-                          color: theme.palette.common.white,
-                          textDecoration: "none",
-                          fontSize: "16px",
-                          fontWeight: 500,
-                          transition: "color 0.3s",
-                        }}
-                        onMouseEnter={(e) =>
-                          (e.target.style.color = theme.headerTextColor)
-                        }
-                        onMouseLeave={(e) =>
-                          (e.target.style.color = theme.palette.common.white)
-                        }
-                      >
-                        {page}
-                      </Link>
-                    )
-                  )}
-                </Box>
-              }
-            />
+  title={
+    <span
+      style={{
+        display: "inline-block",
+        fontWeight: "bold",
+        fontSize: "24px",
+        color: "white",
+        animation: "3s linear infinite",
+      }}
+    >
+      Pages
+    </span>
+  }
+  padding={8}
+  content={
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        gap: 1.5,
+      }}
+    >
+      {["About Us", "Services", "Training", "Blog"].map((page, idx) => (
+        <Link
+          key={idx}
+          to={`/${page.toLowerCase().replace(/\s+/g, "")}`}
+          style={{
+            color: theme.palette.common.white,
+            textDecoration: "none",
+            fontSize: "16px",
+            fontWeight: 500,
+            transition: "color 0.3s",
+          }}
+          onMouseEnter={(e) =>
+            (e.target.style.color = theme.headerTextColor)
+          }
+          onMouseLeave={(e) =>
+            (e.target.style.color = theme.palette.common.white)
+          }
+        >
+          {page}
+        </Link>
+      ))}
+    </Box>
+  }
+/>
+
+
+
           </Grid>
 
           {/* Services */}
           <Grid item xs={12} md={6} lg={3}>
             <Section
-              title="Our Services"
+              title={
+                <span
+                  style={{
+                    display: "inline-block",
+                    fontWeight: "bold",
+                    fontSize: "24px",
+                    color: "white",
+                    animation: "3s linear infinite",
+                  }}
+                >
+                  Our Services
+                </span>
+              }
               content={[
                 "Drone Show",
                 "Surveying & Mapping",
@@ -147,7 +172,21 @@ const Footer = () => {
           {/* Contact Info */}
           <Grid item xs={12} lg={3}>
             <Section
-              title="Contact Info"
+              title={
+                <span
+                  style={{
+                    display: "inline-block",
+                    fontWeight: "bold",
+                    fontSize: "24px",
+                    color: "white",
+                    animation: "3s linear infinite",
+                  }}
+                >
+                  Contact Info
+                </span>
+              }
+              
+              
               isContact={true}
               content={[
                 { icon: <Phone />, text: "+91 89053 65128" },
