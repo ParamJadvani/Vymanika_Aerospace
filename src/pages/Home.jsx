@@ -2,7 +2,8 @@
 import Navbar from "/src/components/Navbar";
 import Banner from "/src/components/Banner";
 import bannerimage from "/src/assets/BannerImage/Home.png";
-import { Box, Button, Typography } from "@mui/material";
+import { Button } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useNavigate } from "react-router-dom";
@@ -144,15 +145,240 @@ const Home = () => {
                   borderRadius: "0px",
                   fontWeight: 700,
                   border: "2px solid #5C76DD",
+                  position: "relative",
+                  display: "inline-block",
                 }}
                 onClick={() => navigate("/aboutus")}
               >
+                <div className="star-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 784.11 815.53"
+                  >
+                    <path
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      fill="#FFFDEF"
+                    ></path>
+                  </svg>
+                </div>
+                <div className="star-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 784.11 815.53"
+                  >
+                    <path
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      fill="#FFFDEF"
+                    ></path>
+                  </svg>
+                </div>
+                <div className="star-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 784.11 815.53"
+                  >
+                    <path
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      fill="#FFFDEF"
+                    ></path>
+                  </svg>
+                </div>
+                <div className="star-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 784.11 815.53"
+                  >
+                    <path
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      fill="#FFFDEF"
+                    ></path>
+                  </svg>
+                </div>
+                <div className="star-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 784.11 815.53"
+                  >
+                    <path
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      fill="#FFFDEF"
+                    ></path>
+                  </svg>
+                </div>
+                <div className="star-6">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 784.11 815.53"
+                  >
+                    <path
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      fill="#FFFDEF"
+                    ></path>
+                  </svg>
+                </div>
                 Know More
               </Button>
+              <style>
+                {` :root{
+                          --color: #5C76DD;
+                        }
+
+                        Button {
+                          position: relative;
+                          padding: 12px 35px;
+                          background: var(--color);
+                          font-size: 17px;
+                          font-weight: 500;
+                          color: #5C76DD;
+                          border: 3px solid var(--color);
+                          border-radius: 8px;
+                          box-shadow: 0 0 0 #5C76DD;
+                          transition: all .3s ease-in-out;
+                          cursor: pointer;
+                        }
+
+                        .star-1 {
+                          position: absolute;
+                          top: 20%;
+                          left: 20%;
+                          width: 25px;
+                          height: auto;
+                          filter: drop-shadow(0 0 0 #fffdef);
+                          z-index: -5;
+                          transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+                        }
+
+                        .star-2 {
+                          position: absolute;
+                          top: 45%;
+                          left: 45%;
+                          width: 15px;
+                          height: auto;
+                          filter: drop-shadow(0 0 0 #fffdef);
+                          z-index: -5;
+                          transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+                        }
+
+                        .star-3 {
+                          position: absolute;
+                          top: 40%;
+                          left: 40%;
+                          width: 5px;
+                          height: auto;
+                          filter: drop-shadow(0 0 0 #fffdef);
+                          z-index: -5;
+                          transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+                        }
+
+                        .star-4 {
+                          position: absolute;
+                          top: 20%;
+                          left: 40%;
+                          width: 8px;
+                          height: auto;
+                          filter: drop-shadow(0 0 0 #fffdef);
+                          z-index: -5;
+                          transition: all .8s cubic-bezier(0, 0.4, 0, 1.01);
+                        }
+
+                        .star-5 {
+                          position: absolute;
+                          top: 25%;
+                          left: 45%;
+                          width: 15px;
+                          height: auto;
+                          filter: drop-shadow(0 0 0 #fffdef);
+                          z-index: -5;
+                          transition: all .6s cubic-bezier(0, 0.4, 0, 1.01);
+                        }
+
+                        .star-6 {
+                          position: absolute;
+                          top: 5%;
+                          left: 50%;
+                          width: 5px;
+                          height: auto;
+                          filter: drop-shadow(0 0 0 #fffdef);
+                          z-index: -5;
+                          transition: all .8s ease;
+                        }
+
+                        Button:hover {
+                          background: transparent;
+                          color: var(--color);
+                          box-shadow: 0 0 25px #5C76DD;
+                        }
+
+                        Button:hover .star-1 {
+                          position: absolute;
+                          top: -80%;
+                          left: -30%;
+                          width: 25px;
+                          height: auto;
+                          filter: drop-shadow(0 0 10px #fffdef);
+                          z-index: 2;
+                        }
+
+                        Button:hover .star-2 {
+                          position: absolute;
+                          top: -25%;
+                          left: 10%;
+                          width: 15px;
+                          height: auto;
+                          filter: drop-shadow(0 0 10px #fffdef);
+                          z-index: 2;
+                        }
+
+                        Button:hover .star-3 {
+                          position: absolute;
+                          top: 55%;
+                          left: 25%;
+                          width: 5px;
+                          height: auto;
+                          filter: drop-shadow(0 0 10px #fffdef);
+                          z-index: 2;
+                        }
+
+                        Button:hover .star-4 {
+                          position: absolute;
+                          top: 30%;
+                          left: 80%;
+                          width: 8px;
+                          height: auto;
+                          filter: drop-shadow(0 0 10px #fffdef);
+                          z-index: 2;
+                        }
+
+                        Button:hover .star-5 {
+                          position: absolute;
+                          top: 25%;
+                          left: 115%;
+                          width: 15px;
+                          height: auto;
+                          filter: drop-shadow(0 0 10px #fffdef);
+                          z-index: 2;
+                        }
+
+                        Button:hover .star-6 {
+                          position: absolute;
+                          top: 5%;
+                          left: 60%;
+                          width: 5px;
+                          height: auto;
+                          filter: drop-shadow(0 0 10px #fffdef);
+                          z-index: 2;
+                        }
+
+                        .fil0 {
+                          fill: #FFFDEF;
+                        }
+                `}
+              </style>
             </Box>
           </Box>
         }
       />
+
       {/* Vision Section */}
       <Vision_Section
         title="Our Mission"
@@ -204,7 +430,7 @@ const Home = () => {
                 lg: "-3%",
                 xl: "0%",
               },
-              top: { xs: "-0%", sm: "0%", lg: "6.5%",xl:'2%' },
+              top: { xs: "-0%", sm: "0%", lg: "6.5%", xl: "2%" },
               animation: "float 3s ease-in-out infinite",
             }}
           />
