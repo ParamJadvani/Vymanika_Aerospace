@@ -175,6 +175,12 @@ const BlogGrid = ({ blogData = [] }) => {
                       color: "#ffffff",
                     },
                   }}
+                  onClick={() =>
+                    window.open(
+                      "https://botsanddrones.in/news/f/international-drone-show-2025-june-18-19-in-odense-denmark",
+                      "_blank"
+                    )
+                  }
                 >
                   Know More
                   <Box

@@ -136,7 +136,12 @@ const BlogBanner_2 = ({ bigImage = true }) => {
                   border: "2px solid #5C76DD",
                   marginBottom: "10px",
                 }}
-                onClick={() => navigate("/aboutus")}
+                onClick={() =>
+                  window.open(
+                    "https://youtu.be/AACpY8apGec?si=8d9h-v_v_4fN3Oi5",
+                    "_blank"
+                  )
+                }
               >
                 Know More
               </Button>
