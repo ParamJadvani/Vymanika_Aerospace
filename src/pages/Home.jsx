@@ -157,7 +157,7 @@ const Home = () => {
                   >
                     <path
                       d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                      fill="#FFFDEF"
+                      fill="#5C76DD"
                     ></path>
                   </svg>
                 </div>
@@ -168,7 +168,7 @@ const Home = () => {
                   >
                     <path
                       d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                      fill="#FFFDEF"
+                      fill="#5C76DD"
                     ></path>
                   </svg>
                 </div>
@@ -179,7 +179,7 @@ const Home = () => {
                   >
                     <path
                       d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                      fill="#FFFDEF"
+                      fill="#5C76DD"
                     ></path>
                   </svg>
                 </div>
@@ -190,7 +190,7 @@ const Home = () => {
                   >
                     <path
                       d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                      fill="#FFFDEF"
+                      fill="#5C76DD"
                     ></path>
                   </svg>
                 </div>
@@ -201,7 +201,7 @@ const Home = () => {
                   >
                     <path
                       d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                      fill="#FFFDEF"
+                      fill="#5C76DD"
                     ></path>
                   </svg>
                 </div>
@@ -212,7 +212,7 @@ const Home = () => {
                   >
                     <path
                       d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                      fill="#FFFDEF"
+                      fill="#5C76DD"
                     ></path>
                   </svg>
                 </div>
@@ -243,7 +243,7 @@ const Home = () => {
                           left: 20%;
                           width: 25px;
                           height: auto;
-                          filter: drop-shadow(0 0 0 #fffdef);
+                          filter: drop-shadow(0 0 0 #5C76DD);
                           z-index: -5;
                           transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
                         }
@@ -254,7 +254,7 @@ const Home = () => {
                           left: 45%;
                           width: 15px;
                           height: auto;
-                          filter: drop-shadow(0 0 0 #fffdef);
+                          filter: drop-shadow(0 0 0 #5C76DD);
                           z-index: -5;
                           transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
                         }
@@ -265,7 +265,7 @@ const Home = () => {
                           left: 40%;
                           width: 5px;
                           height: auto;
-                          filter: drop-shadow(0 0 0 #fffdef);
+                          filter: drop-shadow(0 0 0 #5C76DD);
                           z-index: -5;
                           transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
                         }
@@ -276,7 +276,7 @@ const Home = () => {
                           left: 40%;
                           width: 8px;
                           height: auto;
-                          filter: drop-shadow(0 0 0 #fffdef);
+                          filter: drop-shadow(0 0 0 #5C76DD);
                           z-index: -5;
                           transition: all .8s cubic-bezier(0, 0.4, 0, 1.01);
                         }
@@ -287,7 +287,7 @@ const Home = () => {
                           left: 45%;
                           width: 15px;
                           height: auto;
-                          filter: drop-shadow(0 0 0 #fffdef);
+                          filter: drop-shadow(0 0 0 #5C76DD);
                           z-index: -5;
                           transition: all .6s cubic-bezier(0, 0.4, 0, 1.01);
                         }
@@ -298,7 +298,7 @@ const Home = () => {
                           left: 50%;
                           width: 5px;
                           height: auto;
-                          filter: drop-shadow(0 0 0 #fffdef);
+                          filter: drop-shadow(0 0 0 #5C76DD);
                           z-index: -5;
                           transition: all .8s ease;
                         }
@@ -315,7 +315,7 @@ const Home = () => {
                           left: -30%;
                           width: 25px;
                           height: auto;
-                          filter: drop-shadow(0 0 10px #fffdef);
+                          filter: drop-shadow(0 0 10px #5C76DD);
                           z-index: 2;
                         }
 
@@ -325,7 +325,7 @@ const Home = () => {
                           left: 10%;
                           width: 15px;
                           height: auto;
-                          filter: drop-shadow(0 0 10px #fffdef);
+                          filter: drop-shadow(0 0 10px #5C76DD);
                           z-index: 2;
                         }
 
@@ -335,7 +335,7 @@ const Home = () => {
                           left: 25%;
                           width: 5px;
                           height: auto;
-                          filter: drop-shadow(0 0 10px #fffdef);
+                          filter: drop-shadow(0 0 10px #5C76DD);
                           z-index: 2;
                         }
 
@@ -345,7 +345,7 @@ const Home = () => {
                           left: 80%;
                           width: 8px;
                           height: auto;
-                          filter: drop-shadow(0 0 10px #fffdef);
+                          filter: drop-shadow(0 0 10px #5C76DD);
                           z-index: 2;
                         }
 
@@ -355,7 +355,7 @@ const Home = () => {
                           left: 115%;
                           width: 15px;
                           height: auto;
-                          filter: drop-shadow(0 0 10px #fffdef);
+                          filter: drop-shadow(0 0 10px #5C76DD);
                           z-index: 2;
                         }
 
@@ -365,7 +365,7 @@ const Home = () => {
                           left: 60%;
                           width: 5px;
                           height: auto;
-                          filter: drop-shadow(0 0 10px #fffdef);
+                          filter: drop-shadow(0 0 10px #5C76DD);
                           z-index: 2;
                         }
 
